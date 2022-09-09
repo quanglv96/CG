@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra so if else</title>
+</head>
+<body>
+<script> // cau truc if..else
+let a = +prompt("Nhap so can kiem tra");
+if (a === 0) {
+    alert(0);
+} else {
+    if (a > 0) {
+        alert("1");
+    } else {
+        alert("-1");
+    }
+}
+</script>
+<script> // cau truc switch
+let a = +prompt("Nhap so can kiem tra");
+switch (a) {
+    case 0:
+        alert(0);
+        break;
+    case (!0):
+        if (a>0) {
+            alert(1);
+        } else {
+            alert("-1");
+        }
+}
+</script>
+</body>
+</html>
