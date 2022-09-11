@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form nâng cao</title>
+</head>
+<style>
+    form{
+        background-color: bisque;
+        border: 10px;
+        padding-bottom:10px;
+        width: 400px;
+    }
+    h1, h5 {
+        color: black;
+    }
+
+    th {
+        background-color: grey;
+        text-align: center;
+    }
+</style>
+<body>
+<h1>Market Reseach Survey</h1>
+<h5>Please take a few moments to complete this satisfaction survey</h5>
+<form>
+    <p>What is your age range?</p>
+    <select>18-24
+        <option>18-24</option>
+        <option>25-34</option>
+        <option>34-50</option>
+        <option>50+</option>
+    </select>
+    <p>What is your yearly income range?</p>
+    <select>0$-25.000$
+        <option>0$-25.000$</option>
+        <option>25.001$-50.000$</option>
+        <option>50.001$-100.000$</option>
+        <option>100.000$+</option>
+    </select>
+    <p>Gender Identity</p>
+    <input type="checkbox" name="gender" value="male">Male<br>
+    <input type="checkbox" name="gender" value="female">Female<br>
+    <input type="checkbox" name="gender" value="nonbinary">Nonbinary<br>
+    <input type="checkbox" name="gender" value="other">Other<br>
+    <p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+    <input type="checkbox" name="product" value="product 1"> Product 1<br>
+    <input type="checkbox" name="product" value="product 2"> Product 2<br>
+    <input type="checkbox" name="product" value="product 3"> Product 3<br>
+    <p>How often would you use uor new product?</p>
+    <input type="checkbox" name="time" value="daily">Daily<br>
+    <input type="checkbox" name="time" value="weekly">Weekly<br>
+    <input type="checkbox" name="time" value="monthly">Monthly<br>
+    <p>What would you pay for the new product?</p>
+    <table>
+        <tr>
+            <td>$</td>
+            <td style="width: 1px"><input type="text" name="dollars"></td>
+            <td>.</td>
+            <td style="width: 2px"><input type="text" name="cent"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="width: 30px">Dollars</td>
+            <td></td>
+            <td style="width: 20px">Cent</td>
+        </tr>
+    </table>
+    <p>What features would you like to use in the new product.</p>
+    <textarea name="features" rows="5" cols="40"></textarea>
+    <p>Please rate your lever of agreement with the following statements.</p>
+    <table name="QE">
+        <tr>
+            <th style="width:400px"></th>
+            <th style="width:40px; padding: 5px">Strongly Disagree</th>
+            <th style="width:40px; padding: 5px">Disagree</th>
+            <th style="width:40px; padding: 5px">Agree</th>
+        </tr>
+        <tr>
+            <td>Our products are priced fairly.</td>
+            <td style="text-align: center"><input type="checkbox" name="Q1" value="1">1</td>
+            <td style="text-align: center"><input type="checkbox" name="Q1" value="2">2</td>
+            <td style="text-align: center"><input type="checkbox" name="Q1" value="3">3</td>
+        </tr>
+        <tr>
+            <td>Our products are hight quality.</td>
+            <td style="text-align: center"><input type="checkbox" name="Q2" value="1">1</td>
+            <td style="text-align: center"><input type="checkbox" name="Q2" value="2">2</td>
+            <td style="text-align: center"><input type="checkbox" name="Q2" value="3">3</td>
+        </tr>
+        <tr>
+            <td>You would recommend our product to a friend or coworker.</td>
+            <td style="text-align: center"><input type="checkbox" name="Q3" value="1">1</td>
+            <td style="text-align: center"><input type="checkbox" name="Q3" value="2">2</td>
+            <td style="text-align: center"><input type="checkbox" name="Q3" value="3">3</td>
+        </tr>
+    </table>
+    <input type="submit" name="submit" value="Submit">
+</form>
+</body>
+</html>
