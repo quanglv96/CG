@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Slack</title>
+</head>
+<body>
+//Bài 4a
+<p> Tính chu vi và diện tích hình vuông canh a</p>
+<table>
+    <tr>
+        <td>Nhập độ dài hình vuông</td>
+        <td><input type="text" id="numA"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Kết quả" onclick="tinhtoan();"/></td>
+    </tr>
+    <tr>
+        <td><p id="ketqua1"></p></td>
+    </tr>
+    <tr>
+        <td><p id="ketqua2"></p></td>
+    </tr>
+</table>
+<script>
+    function tinhtoan() {
+        let NumA = +document.getElementById('numA').value;
+        if (NumA > 0) {
+            let chuvi = NumA * 4;
+            let dientich = NumA ** 2;
+            document.getElementById('ketqua1').innerHTML = "Chu vi hình vuông là " + chuvi;
+            document.getElementById('ketqua2').innerHTML = "Diện tích hình vuông là " + dientich;
+        } else {
+            document.getElementById('ketqua1').innerHTML = "Độ dài cạnh phải lớn hơn 0 ";
+        }
+    }
+</script>
+//Bài 4B
+<p> tính bình phương a và b</p>
+<table>
+    <tr>
+        <td><p>Nhập số a</p></td>
+        <td><input type="text" id="num4ba"></td>
+    </tr>
+    <tr>
+        <td><p>Nhập số b</p></td>
+        <td><input type="text" id="num4bb"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Tính bình phương" onclick="tinhbinhphuong();"/></td>
+    </tr>
+    <tr>
+        <td><p id="binhphuonga"></p></td>
+    </tr>
+    <tr>
+        <td><p id="binhphuongb"></p></td>
+    </tr>
+</table>
+<script>
+    function tinhbinhphuong() {
+        let Num4BA = +document.getElementById('num4ba').value;
+        let Num4BB = +document.getElementById('num4bb').value;
+        let AA = Num4BA ** 2;
+        let BB = Num4BB ** 2;
+        document.getElementById('binhphuonga').innerHTML = "Bình phương của " + Num4BA + " là " + AA;
+        document.getElementById('binhphuongb').innerHTML = "Bình phương của " + Num4BB + " là " + BB;
+    }
+</script>
+//Bài 4c
+<p>Tính tổng dãy số từ A đến B</p>
+<table>
+    <tr>
+        <td>Nhập số A</td>
+        <td><input type="text" id="num4ca"></td>
+    </tr>
+    <tr>
+        <td>Nhập số B</td>
+        <td><input type="text" id="num4cb"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Tính tổng" onclick="tinhtongadenb()";/></td>
+    </tr>
+    <tr>
+        <td colspan="2"><p id="tongadenb"></p></td>
+        <td></td>
+    </tr>
+</table>
+<script>
+    function tinhtongadenb() {
+        let Num4CA= + document.getElementById('num4ca').value;
+        let Num4CB= + document.getElementById('num4cb').value;
+        if (Num4CB>Num4CA) {
+                let dayso=((Num4CB-Num4CA)/1)+1;
+                let tongab=(Num4CB+Num4CA)*dayso/2;
+                document.getElementById('tongadenb').innerHTML="Tổng dãy số từ A đến B là "+tongab;
+        } else {
+            document.getElementById('tongadenb').innerHTML="Số B phải lớn hơn số A. Vui lòng nhập lại";
+        }
+    }
+</script>
+//bài 4d
+<table>
+    <tr>
+        <td>Nhập số năm cần xác định</td>
+        <td><input id="year"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Xác định" onclick="xacdinh()";/></td>
+    </tr>
+    <tr>
+        <td><p id="ketqua"></p></td>
+        <td></td>
+    </tr>
+</table>
+<script>
+    function xacdinh(){
+        let namxd= +document.getElementById("year").value;
+        let lamtron= namxd-namxd%100;
+        let theki= lamtron/100 + 1;
+        document.getElementById("ketqua").innerHTML="Năm "+namxd+" thuộc thế kỉ "+theki;
+    }
+</script>
+//Bài 4e ktra 3 cạnh a b c
+<table>
+    <tr>
+        <td>Nhập A</td>
+        <td><input type="text" id="canhA"></td>
+    </tr><tr>
+        <td>Nhập B</td>
+        <td><input type="text" id="canhB"></td>
+    </tr><tr>
+        <td>Nhập C</td>
+        <td><input type="text" id="canhC"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Kiểm tra" onclick="tamgiacabc()";/></td>
+    </tr>
+    <tr>
+        <td><p id="ketquakiemtra"></p></td>
+    </tr>
+</table>
+<script>
+    function tamgiacabc() {
+        let Ca = +document.getElementById('canhA').value;
+        let Cb = +document.getElementById('canhB').value;
+        let Cc = +document.getElementById('canhC').value;
+        if (Ca > Cb + Cc) {
+            document.getElementById("ketquakiemtra").innerHTML = Ca + "," + Cb + "," + Cc + " không phải độ dài 3 cạnh tam giác";
+        } else {
+            if (Ca === Cb || Ca === Cc || Cb === Cc) {
+                if (Ca === Cb && Cb===Cc) {
+                    document.getElementById("ketquakiemtra").innerHTML = Ca + "," + Cb + "," + Cc + " là độ dài 3 cạnh của tam giác đều";
+                } else {
+                    document.getElementById("ketquakiemtra").innerHTML = Ca + "," + Cb + "," + Cc + " là độ dài 3 cạnh của tam giác cân";
+                }
+            } else {
+                if (Ca * Ca === Cb * Cb + Cc * Cc || Cb * Cb === Cc * Cc + Ca * Ca || Cc * Cc === Ca * Ca + Cb * Cb) {
+                    document.getElementById("ketquakiemtra").innerHTML = Ca + "," + Cb + "," + Cc + " là độ dài 3 cạnh của tam giác vuông";
+                } else {
+                    document.getElementById("ketquakiemtra").innerHTML = Ca + "," + Cb + "," + Cc + " là độ dài 3 cạnh của tam giác thường";
+                }
+
+            }
+
+        }
+
+    }
+</script>
+</body>
+</html>
