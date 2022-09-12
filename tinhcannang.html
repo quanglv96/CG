@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính chỉ số cân nặng</title>
+</head>
+<style>
+    table{
+        text-align: center;
+    }
+</style>
+<h2>Chỉ số khối cơ thể</h2>
+<table>
+    <tr>
+        <th>Chiều sao(M)</th>
+        <td><input type="text" id="chieucao"></td>
+    </tr>
+    <tr>
+        <th>Cân nặng(Kg)</th>
+        <td><input type="text" id="cannang"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Kiểm tra chỉ số" onclick="kiemtra()"/></td>
+    </tr>
+    <tr>
+        <td colspan="2"><p id="kq"></p></td>
+    </tr>
+</table>
+<body>
+<script>
+    function kiemtra() {
+        let M=+document.getElementById('chieucao').value;
+        let Kg=+document.getElementById('cannang').value;
+        let bmi=Kg/(M**2);
+        if (bmi <18.5){
+            document.getElementById('kq').innerHTML="Chỉ số BMI của bạn là "+ bmi+" bạn thuộc nhóm Underweight";
+        } else{
+            if (bmi>=18.5 && bmi<25.0){
+                document.getElementById('kq').innerHTML="Chỉ số BMI của bạn là "+ bmi+" bạn thuộc nhóm Normal";
+            } else {
+                if (bmi>=25.0 && bmi<30.0){
+                    document.getElementById('kq').innerHTML="Chỉ số BMI của bạn là "+ bmi+" bạn thuộc nhóm Overweight";
+                } else {
+                    document.getElementById('kq').innerHTML="Chỉ số BMI của bạn là "+ bmi+" bạn thuộc nhóm Obese";
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
