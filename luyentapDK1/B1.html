@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>A chia het cho B</title>
 </head>
 <body>
-$END$
+<table>
+  <tr>
+  <td> Nhập số A</td>
+  <td><input type="text" id="numA"></td>
+  </tr>
+  <tr>
+  <td>Nhập số B</td>
+  <td><input type="text" id="numB"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="button" value="Kiểm tra" onclick="test();"/></td>
+  </tr>
+</table>
 </body>
+<script>
+  function test() {
+    let NumA= +document.getElementById('numA').value;
+    let NumB= +document.getElementById('numB').value;
+    let NumC= NumA%NumB
+    if (NumC == 0)
+      document.write(NumA + " chia hết cho " + NumB);
+    else
+      document.write(NumA + " không chia hết cho " + NumB);
+  }
+</script>
 </html>

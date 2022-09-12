@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<style>
+  table{
+    boder: 1px solid black;
+    padding:5px;
+    width:1000px;
+    background-color: #e0e0e0;
+    text-align: center;
+  }
+  th{
+    border: 1px solid black;
+    width: 200px;
+  }
+</style>
+<h2>tính cước thuê bao</h2>
+<table>
+  <tr>
+    <th>số phút gọi</th>
+    <th>Số tiền</th>
+  </tr>
+  <tr>
+    <td><input type="text" id="phut"></td>
+    <Td><p id="sotien"></p></Td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Thành tiền" onclick="tinhtoan()"/></td>
+  </tr>
+</table>
+<script>
+  function tinhtoan(){
+    let TG=+document.getElementById('phut').value;
+    if (TG<50){
+      let TT=(25+600*TG);
+      document.getElementById('sotien').innerHTML=TT;
+    } else {
+      if (TG>=50 && TG<200){
+        let TT=(25+600*50+(TG-50)*400);
+        document.getElementById('sotien').innerHTML=TT;
+      } else {
+        let TT=(25+600*50+150*400+(TG-200)*200);
+        document.getElementById('sotien').innerHTML=TT;
+      }
+    }
+  }
+</script>
+</body>
+</html>

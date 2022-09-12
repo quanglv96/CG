@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>kiểm tra tuổi vào lớp 10</title>
 </head>
+<style>
+    table{
+        width: 400px;
+    }
+    h1 {
+        width: 300px;
+    }
+</style>
 <body>
-$END$
+<h1>Kiểm tra điều kiện tuổi vào lớp 10</h1>
+<table>
+  <tr>
+    <p>Nhập tuổi</p>
+    <td><input type="text" id="age"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Kiểm tra" onclick="ktratuoi();"/></td>
+  </tr>
+</table>
+<script>
+  function ktratuoi() {
+    let AGE=+document.getElementById('age').value;
+    if (AGE>=15)
+      document.write('Bạn đủ điều kiện vào học lớp 10');
+    else
+      document.write('Bạn chưa đủ điều kiện vào học lớp 10');
+  }
+</script>
 </body>
 </html>

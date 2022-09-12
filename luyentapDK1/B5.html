@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<style>
+    table{
+        width: 1000px;
+        padding: 50px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    th {
+        width: 100px;
+        border: aquamarine;
+        text-align: center;
+    }
+    td{
+        width: 100px;
+        border: #d61b06;
+        text-align: center;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <th>Điểm kiểm tra</th>
+        <th>Điểm thi giữa kì</th>
+        <th>Điểm thi cuối kì</th>
+        <th>Điểm trung bình</th>
+        <th>Xếp hạng học lực</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="kiemtra"></td>
+        <td><input type="text" id="giuaki"></td>
+        <td><input type="text" id="cuoiki"></td>
+        <td style="width: 100px"><p id="trungbinh"></p></td>
+        <td style="width: 100px"><p id="xephang"></p></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Đánh giá" onclick="danhgia()"/></td>
+    </tr>
+</table>
+<script>
+    function danhgia() {
+        let KT=+document.getElementById("kiemtra").value;
+        let GK=+document.getElementById("giuaki").value;
+        let CK=+document.getElementById("cuoiki").value;
+        let TB=(KT+GK+CK)/3;
+        document.getElementById('trungbinh').innerHTML= TB;
+        if (TB>=9){
+            document.getElementById('xephang').innerHTML='Xếp hạng A';
+        } else {
+            if (TB<9 && TB>=7){
+                document.getElementById('xephang').innerHTML='Xếp hạng B';
+            } else {
+                if (TB<7 && TB>=5){
+                    document.getElementById('xephang').innerHTML='Xếp hạng C';
+                } else {
+                    document.getElementById('xephang').innerHTML='Xếp hạng F';
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên lớn nhất</title>
+</head>
+<body>
+<h2> Tìm số nguyên lớn nhất</h2>
+<table>
+  <tr>
+    <td>Nhập số A</td>
+    <td><input type="text" id="numA"></td>
+  </tr><tr>
+    <td>Nhập số B</td>
+    <td><input type="text" id="numB"></td>
+  </tr><tr>
+    <td>Nhập số C</td>
+    <td><input type="text" id="numC"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Kiểm tra" onclick="check()";/></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p id="ketqua"></p></td>
+  </tr>
+</table>
+<script>
+  function check() {
+    let NumA = +document.getElementById('numA').value;
+    let NumB = +document.getElementById('numB').value;
+    let NumC = +document.getElementById('numC').value;
+    if (NumA > NumB && NumA > NumC) {
+      document.getElementById("ketqua").innerHTML = NumA + " là số lớn nhất trong 3 số";
+    } else {
+      if (NumB > NumC) {
+        document.getElementById("ketqua").innerHTML = NumB + " là số lớn nhất trong 3 số";
+      } else {
+        document.getElementById("ketqua").innerHTML = NumC + " là số lớn nhất trong 3 số";
+      }
+    }
+  }
+</script>
+</body>
+</html>

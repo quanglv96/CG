@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên lớn hơn hay nhỏ hơn0</title>
 </head>
 <body>
-$END$
+<h2>Kiểm tra số nguyên</h2>
+<table>
+    <tr>
+        <td>Nhập số nguyên cần kiểm tra</td>
+        <td><input type="text" id="songuyen"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Kiểm tra" onclick="kiemtra()"/></td>
+    </tr>
+    <tr>
+        <td><p id="ketqua"></p></td>
+    </tr>
+</table>
+<script>
+    function kiemtra(){
+        let Numa=+document.getElementById("songuyen").value;
+        if (Numa==0){
+            document.getElementById("ketqua").innerHTML="Số nhập là số 0";
+        } else{
+            if (Numa>0){
+                document.getElementById("ketqua").innerHTML="Số "+ Numa +" là số nguyên lớn hơn 0";
+            } else {
+                document.getElementById("ketqua").innerHTML="Số "+ Numa +" là số nguyên nhỏ hơn 0";
+            }
+        }
+    }
+</script>
 </body>
 </html>

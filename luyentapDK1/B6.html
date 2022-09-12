@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng</title>
+</head>
+<style>
+    table{
+        boder: 1px solid black;
+        padding:5px;
+        width:1000px;
+        background-color: #e0e0e0;
+        text-align: center;
+    }
+    th{
+        border: 1px solid black;
+        width: 200px;
+    }
+</style>
+<h2>Mức hoa hồng nhận được</h2>
+<table>
+    <tr>
+        <th>Doanh thu</th>
+        <th>% hoa hồng tương ưng</th>
+        <th>Số tiền hoa hồng</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="doanhthu"></td>
+        <td><p id="muchoahong"></p></td>
+        <Td><p id="sotien"></p></Td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Tính hoa hồng" onclick="tinhtoan()"/></td>
+    </tr>
+</table>
+<script>
+    function tinhtoan(){
+        let DT=+document.getElementById('doanhthu').value;
+        if (DT>300000000){
+            let HH=(DT*0.2);
+            document.getElementById('sotien').innerHTML= HH;
+            document.getElementById('muchoahong').innerHTML="20%";
+        } else {
+            if (DT<=300000000 && DT>100000000){
+                let HH=(DT*0.1);
+                document.getElementById('sotien').innerHTML= HH;
+                document.getElementById('muchoahong').innerHTML="10%";
+            } else {
+                let HH = (DT * 0.05);
+                document.getElementById('sotien').innerHTML = HH;
+                document.getElementById('muchoahong').innerHTML="5%";
+            }
+        }
+    }
+</script>
+<body>
+</body>
+</html>
