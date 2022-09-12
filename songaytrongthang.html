@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số ngày trong tháng</title>
+</head>
+<style>
+  table{
+    border: 1px solid black;
+    text-align: center;
+  }
+</style>
+<h2> Nhập tháng cần kiểm tra</h2>
+<table>
+  <tr>
+    <th>Tháng</th>
+    <td><input type="text" id="thang"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Kiểm tra" onclick="ktra()"/></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p id="kq"></p></td>
+  </tr>
+</table>
+<body>
+<script>
+  function ktra(){
+    let a=+document.getElementById('thang').value;
+    if (a>12){
+      document.getElementById('kq').innerHTML="Không có tháng "+a;
+    } else{
+      switch (a) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+          document.getElementById('kq').innerHTML="Tháng "+a+" có 31 ngày";
+          break
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          document.getElementById('kq').innerHTML="Tháng "+a+" có 30 ngày";
+          break
+        case 2:
+          document.getElementById('kq').innerHTML="Tháng "+a+" có 28 hoặc 29 ngày";
+          break
+      }
+    }
+  }
+</script>
+</body>
+</html>
