@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let count=0
+   for (let snt=2; snt<50;snt++){
+       if (snt<50){
+           for(let i=1;i<=snt;i++){
+               if(snt%i==0){
+                   count+=1;
+               }
+           }
+           if(count==2){
+               document.write(snt+"<br>");
+               snt+=1
+           }
+           count=0;
+       } else
+           break;
+   }
+</script>
+</html>

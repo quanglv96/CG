@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị n số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let N = 2
+    let count = 0;//số nguyên đã đã in
+    let numb = +prompt("Số nguyên tố muốn hiển thị");
+    let countNum = 0;
+    for (N = 0; N < 1000; N++) {
+        if (count <= numb) {
+            for (let i = 1; i <= N; i++) {
+                if (N % i == 0) {
+                    count += 1;
+                }
+            }
+            if (count == 2) {
+                document.write(N + "<br>");
+                count += 1;
+                countNum ++;
+            }
+            count =0;
+        } else {
+            break;
+        }
+        if (countNum == numb) {
+            break;
+        }
+    }
+</script>
+</body>
+</html>
