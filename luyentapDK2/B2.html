@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>chuyển từ mét sang feet</title>
 </head>
+<h2>Chuyển đổi từ Mét sang Feet</h2>
+<tr>
+  <td><input type="text" id="m"></td>
+  <td><input type="button" value="Chuyển đổi" onclick="chuyendoi()"/></td>
+</tr>
+<tr>
+  <td colspan="2"><p id="kq"></p></td>
+</tr>
+</table>
 <body>
-$END$
+<script>
+  function chuyendoi(){
+    let M=+document.getElementById('m').value;
+    if (M>=0) {
+      let F = M * 3.2808;
+      document.getElementById('kq').innerHTML = M+" m"+" bằng "+ F+" feet";
+    } else {
+      document.getElementById('kq').innerHTML = " Giá trị Mét không đúng";
+    }
+  }
+</script>
 </body>
 </html>

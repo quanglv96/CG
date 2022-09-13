@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
 </head>
+<h2>Giải phương trình bậc 1 ax+b=0</h2>
+<table>
+  <tr>
+    <td>Giá trị của a</td>
+    <td><input type="text" id="numA"></td>
+  </tr><tr>
+    <td>Giá trị của b</td>
+    <td><input type="text" id="numB"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Giải nghiệm" onclick="giai()"/></td>
+  </tr>
+  <tr>
+  <td colspan="2"><p id="nghiem"></p></td>
+  </tr>
+</table>
 <body>
-$END$
+<script>
+  function giai() {
+    let NumA=+-document.getElementById('numA').value;
+    let NumB=+-document.getElementById('numB').value;
+    if (NumA==0 && NumB==0){
+      document.getElementById('nghiem').innerHTML="Phương trình không tồn tại";
+    } else {
+      if (NumA==0){
+        document.getElementById('nghiem').innerHTML="Phương trình vô nghiệm";
+      } else {
+        if (NumB==0){
+          document.getElementById('nghiem').innerHTML="Phương trình có nghiệm x=0";
+        } else {
+          let X=(-NumB/NumA)
+          document.getElementById('nghiem').innerHTML="Phương trình có nghiệm x="+X;
+        }
+
+      }
+    }
+  }
+</script>
+
 </body>
 </html>

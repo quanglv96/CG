@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi</title>
 </head>
+<table>
+  <tr>
+    <th colspan="2">Nhập số tuổi</th>
+  </tr>
+  <tr>
+    <td><input type="text" id="age"></td>
+    <td><input type="button" value="Kiểm tra" onclick="test()"/></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p id="kq"></p></td>
+  </tr>
+</table>
 <body>
-$END$
+<script>
+  function test(){
+    let a=+document.getElementById('age').value;
+    if (a>0 && a<=120){
+      if (Number.isInteger(a)) {
+      document.getElementById('kq').innerHTML="Đúng"
+    } else{
+      document.getElementById('kq').innerHTML="không phải tuổi"
+    }
+  } else {
+      document.getElementById('kq').innerHTML="không phải tuổi"
+    }
+  }
+</script>
+
 </body>
 </html>

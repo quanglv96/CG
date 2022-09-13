@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Diện tích tam giác vuông</title>
 </head>
+<h2>Diện tích tam giác vuông</h2>
+<table>
+  <tr>
+    <th>Độ dài cạnh tam giác </th>
+  </tr>
+  <tr>
+    <td>Độ dài cạnh A</td>
+    <td><input type="text" id="numA"></td>
+  </tr>
+  <tr>
+    <td>Độ dài cạnh B</td>
+    <td><input type="text" id="numB"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Tính diện tích" onclick="tinhtoan()"/></td>
+  </tr>
+  <tr>
+    <td><p id="kq"></p> </td>
+  </tr>
+</table>
 <body>
-$END$
+<script>
+  function tinhtoan(){
+    let NumA=+document.getElementById('numA').value;
+    let NumB=+document.getElementById('numB').value;
+    if (NumA>0 && NumB>0){
+      let DT= NumA*NumB/2;
+      document.getElementById('kq').innerHTML="Diện tích tam giác vuông là "+DT;
+    }else {
+      document.getElementById('kq').innerHTML="Độ dài cạnh không đúng";
+    }
+  }
+</script>
 </body>
 </html>

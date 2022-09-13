@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Chuyển độ C sang độ F</title>
 </head>
+<table>
+    <h2>Chuyển đổi độ C sang độ F</h2>
+    <tr>
+        <td><input type="text" id="doC"></td>
+        <td><input type="button" value="Chuyển đổi" onclick="chuyendoi()"/></td>
+    </tr>
+    <tr>
+        <td colspan="2"><p id="kq"></p></td>
+    </tr>
+</table>
 <body>
-$END$
+<script>
+    function chuyendoi(){
+        let C=+document.getElementById('doC').value;
+        if (C>=0) {
+            let F = C * 9 / 5 + 32;
+            document.getElementById('kq').innerHTML = F + " độ F";
+        } else {
+            document.getElementById('kq').innerHTML = " Giá trị độ C không đúng";
+        }
+    }
+</script>
 </body>
 </html>

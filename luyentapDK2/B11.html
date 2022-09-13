@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập</title>
+</head>
+<table>
+    <tr>
+        <th>thu nhập</th>
+        <th>mức tính thuế</th>
+        <th>tiền thuế phải nộp</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="tn"></td>
+        <td><p id="thue"></p></td>
+        <td><input type="button" value="tiền thuế" onclick="tinhtien()"/></td>
+    </tr>
+    <tr>
+        <td><p id="kq"></p></td>
+    </tr>
+</table>
+<body>
+<script>
+    function tinhtien(){
+        let a=+document.getElementById('tn').value;
+        if (a<=4){
+            document.getElementById('kq').innerHTML=0*a;
+            document.getElementById('thue').innerHTML="0%";
+        } else {
+            if (a>4 && a<=6){
+                document.getElementById('kq').innerHTML=0.05*a;
+                document.getElementById('thue').innerHTML="5%";
+            } else {
+                if (a>6 && a<=9){
+                    document.getElementById('kq').innerHTML=0.1*a;
+                    document.getElementById('thue').innerHTML="10%";
+                }else{
+                    document.getElementById('kq').innerHTML=0.2*a;
+                    document.getElementById('thue').innerHTML="20%"
+                }
+            }
+        }
+    }
+</script>
+</body>
+    </html>

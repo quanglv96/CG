@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính lai bank theo tháng</title>
+</head>
+<table>
+  <tr>
+    <th> Số tiền vay</th>
+    <td><input type="text" id="vay"></td>
+  </tr>
+  <tr>
+    <th> Số tháng vay</th>
+    <td><input type="text" id="thang"></td>
+  </tr>
+  <tr>
+    <th> lãi suất theo tháng</th>
+    <td><input type="text" id="ls"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="tính tiền" onclick="check()"/></td>
+  </tr>
+  <tr>
+    <td><p id="kq1"></p></td>
+  </tr><tr>
+    <td><p id="kq2"></p></td>
+  </tr><tr>
+    <td><p id="kq3"></p></td>
+  </tr>
+</table>
+<body>
+<script>
+  function check(){
+    let a=+document.getElementById('vay').value;
+    let b=+document.getElementById('thang').value;
+    let i=+document.getElementById('ls').value;
+    if (a<0&&b<0&&i<0){
+      document.getElementById('kq').innerHTML= "Thông tin không chính xác";
+    } else {
+      let goc=a/b;
+      let lai=(a*i)/b;
+      let tong= goc+lai;
+      document.getElementById('kq1').innerHTML= "Số tiền lãi trả hàng tháng là "+lai+"<br>";
+      document.getElementById('kq2').innerHTML= "Sô tiền gốc trả hàng tháng là "+goc+"<br>";
+      document.getElementById('kq3').innerHTML= "Số tiền lãi phải trả hàng tháng là "+tong;
+    }
+  }
+</script>
+</body>
+</html>

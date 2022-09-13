@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Diện tích hình chữ nhật khi biết 2 cạnh a và b</title>
 </head>
+<h2>Diện tích hình chữ nhật</h2>
+<table>
+    <tr>
+        <th>Độ dài cạnh hình chữ nhật </th>
+    </tr>
+    <tr>
+        <td>Độ dài cạnh A</td>
+        <td><input type="text" id="numA"></td>
+    </tr>
+    <tr>
+        <td>Độ dài cạnh B</td>
+        <td><input type="text" id="numB"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Tính diện tích" onclick="tinhtoan()"/></td>
+    </tr>
+    <tr>
+        <td><p id="kq"></p> </td>
+    </tr>
+</table>
 <body>
-$END$
+<script>
+    function tinhtoan(){
+        let NumA=+document.getElementById('numA').value;
+        let NumB=+document.getElementById('numB').value;
+        if (NumA>0 && NumB>0){
+            let DT= NumA*NumB;
+            document.getElementById('kq').innerHTML="Diện tích hình chữ nhật là "+DT;
+        }else {
+            document.getElementById('kq').innerHTML="Độ dài cạnh không đúng";
+        }
+    }
+</script>
 </body>
 </html>

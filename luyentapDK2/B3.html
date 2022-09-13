@@ -29,8 +29,12 @@
 <script>
   function tinhtoan(){
     let NumA=+document.getElementById('numA').value;
+    if (NumA>0){
     let DT= NumA**2;
     document.getElementById('kq').innerHTML="Diện tích hình vuông có độ dài cạnh "+ NumA+" là "+DT;
+  }else {
+      document.getElementById('kq').innerHTML="Độ dài cạnh không đúng";
+    }
   }
 </script>
 </body>
