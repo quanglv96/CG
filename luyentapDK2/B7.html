@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<h2> Giải phương trình bậc 2</h2>
+<body>
+<table>
+  <tr>
+    <th> Nhập giá trị A</th>
+    <td><input type="text" id="numA"></td>
+  </tr><tr>
+    <th> Nhập giá trị B</th>
+    <td><input type="text" id="numB"></td>
+  </tr><tr>
+    <th> Nhập giá trị C</th>
+    <td><input type="text" id="numC"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Giải phương trình" onclick="giải()"/></td>
+  </tr>
+  <tr>
+    <td><p id="kq"></p></td>
+  </tr>
+</table>
+</body>
+<script>
+  function giải(){
+    let A=+document.getElementById('numA').value;
+    let B=+document.getElementById('numB').value;
+    let C=+document.getElementById('numC').value;
+    if(A==0){
+      document.getElementById('kq').innerHTML="Không phải phương trình bậc 2";
+    } else {
+      let delta=B*B-4*A*C;
+      if( delta<0){
+        document.getElementById('kq').innerHTML="Phương trình vô nghiệm";
+      } else {
+        if (delta==0){
+          let X=-B/(2*A);
+          document.getElementById('kq').innerHTML="Phương trình có nghiệm X= "+X;
+        } else {
+          let X1=(-B+ Math.sqrt(delta))/(2*A);
+          let X2=(-B- Math.sqrt(delta))/(2*A);
+          document.getElementById('kq').innerHTML="Phương trình có nghiệm X1= "+X1 + " và X2= "+X2;
+        }
+      }
+
+    }
+  }
+</script>
+</html>

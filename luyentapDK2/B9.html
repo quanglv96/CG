@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 3 cạnh 1 tam giác</title>
+</head>
+<h2>Kiểm tra 3 cạnh 1 tam giác</h2>
+<table>
+  <tr>
+    <th>Độ dài cạnh A</th>
+    <td><input type="text" id="canha"></td>
+  </tr><tr>
+    <th>Độ dài cạnh B</th>
+    <td><input type="text" id="canhb"></td>
+  </tr><tr>
+    <th>Độ dài cạnh C</th>
+    <td><input type="text" id="canhc"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Kiểm tra" onclick="check()"/></td>
+  </tr>
+  <tr>
+    <td><p id="kq"></p></td>
+  </tr>
+</table>
+<body>
+<script>
+  function check() {
+    let a = +document.getElementById('canha').value;
+    let b = +document.getElementById('canhb').value;
+    let c = +document.getElementById('canhc').value;
+    if (a > 0 && b > 0 && c > 0) {
+      if (a + b > c && a + c > b && b + c > a) {
+        document.getElementById('kq').innerHTML = a + "," + b + "," + c + " là độ dài 3 cạnh tạm giác";
+      } else {
+        document.getElementById('kq').innerHTML = a + "," + b + "," + c + " không phải là độ dài 3 cạnh tạm giác";
+      }
+    } else {
+      document.getElementById('kq').innerHTML = a + "," + b + "," + c + " không phải là độ dài 3 cạnh tạm giác";
+    }
+  }
+</script>
+</body>
+</html>

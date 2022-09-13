@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng dãy số từ 1 đến N</title>
+</head>
+<p id="kq"></p>
+<body>
+<script>
+  let num= prompt(" Nhập số N");
+  let i;
+  let sum=0;
+  for (i=1;i<=num;i++) {
+    sum=i+sum;
+  }
+  document.getElementById('kq').innerHTML=sum;
+</script>
+</body>
+</html>
