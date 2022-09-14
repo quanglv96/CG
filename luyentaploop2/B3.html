@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in tam giác</title>
+</head>
+<body>
+<script>
+    // // hình 1
+    // let data = "";
+    // for (let i = 1; i <= 5; i++) {
+    //     data += "*"
+    //     document.write(data + "<br>")
+    // }
+    // //hình 2
+    // let data = ""
+    // for (let i = 0; i <= 5; i++) {
+    //     for (let j = 5 - i; j >= 1; j--) {
+    //         data += "*";
+    //     }
+    //     for (let b = 1; b <= i; b++) {
+    //         data += "&nbsp;";
+    //     }
+    //     data += "<br>"
+    // }
+    // document.write(data);
+// hình 3
+//     let data="";
+//     for (let i=0;i<=5;i++){
+//         for (let j = 5 - i; j >= 1; j--) {
+//             data += "&ensp;"
+//         }
+//         for (let b = 1; b <= i; b++) {
+//             data += "*";
+//         }
+//         data += "<br>"
+//     }
+//     document.write(data);
+    //hình 4
+    let data="";
+    for (let i=0;i<=5;i++){
+        for (let b = 1; b <= i; b++) {
+            data += "&ensp;";
+        }
+        for (let j = 5 - i; j >= 1; j--) {
+            data += "*"
+        }
+        data += "<br>"
+    }
+    document.write(data);
+</script>
+</body>
+</html>

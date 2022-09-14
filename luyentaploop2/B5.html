@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính lai kép</title>
+</head>
+<table>
+  <tr>
+    <th>Số tiền</th>
+    <td><input type="text" id="st"></td>
+  </tr><tr>
+    <th>Số tháng</th>
+    <td><input type="text" id="thang"></td>
+  </tr><tr>
+    <th>Lãi suất tháng</th>
+    <td><input type="text" id="ls"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Tính lãi" onclick="tinhtoan()"/></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p id="kq"></p></td>
+  </tr>
+</table>
+<body>
+
+</body>
+<script>
+function tinhtoan(){
+  let tiengoc=+document.getElementById('st').value;
+  let thang=+document.getElementById('thang').value;
+  let laisuat=+document.getElementById('ls').value/100;
+  let FV=tiengoc*(1+laisuat);
+  for (let i=2;i<=thang;i++){
+    FV=FV*(1+laisuat);
+  }
+  let lai=FV-tiengoc;
+  document.getElementById('kq').innerHTML='Tiền lãi đến tháng '+ thang + ' là '+lai;
+}
+</script>
+</html>
