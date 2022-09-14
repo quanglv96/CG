@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="giatri"></td>
+        <td>
+            <select id="from">
+                <option value="1">USD</option>
+                <option value="23000">VND</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="1">USD</option>
+                <option value="23000">VND</option>
+            </select>
+        </td>
+        <td><input type="button" value="Convert" onclick="chuyendoi()"/></td>
+    </tr>
+    <tr>
+        <td><p id="kq"></p></td>
+    </tr>
+</table>
+<body>
+<script>
+    function chuyendoi() {
+        let To=+document.getElementById('to').value;
+        let GT=+document.getElementById('giatri').value;
+        let From=+document.getElementById('from').value;
+        let c=GT*To/From;
+        document.getElementById('kq').innerHTML=c;
+    }
+</script>
+
+</body>
+</html>
