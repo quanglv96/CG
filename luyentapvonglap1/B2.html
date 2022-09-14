@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Nhiet do hien tai</title>
+</head>
+<body>
+<script>
+    // let a= + prompt("Nhiệt độ hiện tại");
+    // if (a>20 && a<100){
+    //     alert(" nhiệt độ bình thường");
+    // } else {
+    //     if ( a<=20){
+    //         alert(" Hãy tăng nhiệt độ");
+    //     } else {
+    //         alert("Hãy giảm nhiệt độ");
+    //
+    //     }
+    // }
+    let a = +prompt("Nhiệt độ hiện tại")
+    while (a <= 100 && a >= 20) {
+        let a = +prompt("Nhiệt độ hiện tại");
+    }
+    if (a < 20) {
+        alert(" Hãy tăng nhiệt độ");
+        let a = +prompt("Nhiệt độ hiện tại");
+    }
+    if (a > 100) {
+        alert("Hãy giảm nhiệt độ");
+        let a = +prompt("Nhiệt độ hiện tại");
+    }
+</script>
+</body>
+</html>

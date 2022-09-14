@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tổng 20 số fibo đầu tiên</title>
+</head>
+<body>
+<script>
+    let a = 1;
+    let a1=0;
+    let sum=0
+    let count = 0;
+    for (count = 0; count < 20; count++) {
+        // document.write(a1 + "<br>")
+        sum+=a1;
+        a1=a1+a;
+        a=a1-a;
+    }
+    document.write(sum);
+</script>
+</body>
+</html>

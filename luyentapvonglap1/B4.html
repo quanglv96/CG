@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // hiển thị số fibo đầu tiên chia hết cho 5
+    let a = 1;
+    let a1 = 0;
+    for (let count = 0; count <= 20; count++) {
+        // document.write(a1 + "<br>")
+        if (a1 % 5 === 0 && a1 !==0) {
+            document.write(a1 + "<br>");
+            break;
+        }
+        a1 = a1 + a;
+        a = a1 - a;
+    }
+</script>
+<script>
+    // hiển thị số thứ n chia hết cho m trong dãy fibo
+    let a = 1;
+    let a1 = 0;
+    let count=0
+    let n = +prompt("So thu n chia het cho m");
+    let m=+ prompt("so muon chia het: m");
+    while (a1 >= 0) {
+        if (a1 % m === 0) {
+            count++;
+        }
+        // document.write(a1 + "<br>");
+        a1 = a1 + a;
+        a = a1 - a;
+        if (count === n) {
+            document.write(a1);
+            break;
+        }
+    }
+
+
+    // for (let count = 0; count <= 20; count++) {
+    //     // document.write(a1 + "<br>")
+    //     if (a1 % 5 === 0 && a1 !==0) {
+    //         document.write(a1 + "<br>");
+    //         break;
+    //     }
+    //     a1 = a1 + a;
+    //     a = a1 - a;
+    // }
+</script>
+</body>
+</html>

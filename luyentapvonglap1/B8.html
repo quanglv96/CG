@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trò chơi đoán số</title>
+</head>
+<form style="width: 200px">
+    <input type="button" value="Bắt đầu" onclick="begin()"/>
+    <p id="hetluot"></p>
+</form>
+<body>
+
+</body>
+<script>
+    function begin() {
+        let max = +prompt("Nhập giới hạn lớn nhất");
+        rand = Math.floor(Math.random(max) * max);
+        // document.write(rand);
+        let rank1 = +prompt("Nhập số bạn đoán");
+        for (count = 0; count < 3; count++) {
+            if (rank1 == rand) {
+                alert("Bạn đã đoán đúng");
+                document.getElementById('hetluot').innerHTML="Chúc mừng";
+                break;
+            }
+            if (rank1 > rand) {
+                alert("số bạn đoán lớn hơn số Đúng");
+                rank1 = +prompt("Nhập số bạn đoán");
+                continue;
+            }
+            if (rank1 < rand) {
+                alert("số bạn đoán bé hơn số Đúng");
+                rank1 = +prompt("Nhập số bạn đoán");
+                continue;
+            }
+        }
+        if (count == 3) {
+            document.getElementById('hetluot').innerHTML="Bạn đã hết lượt chơi";
+        }
+    }
+
+</script>
+</html>
