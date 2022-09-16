@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="text" id="nhap"/>
+<input type="button" value="Play" onclick="play()"/>
+<p id="kq"></p>
+<body>
+</body>
+<script>
+  function play(){
+    let nhap=document.getElementById('nhap').value;
+    console.log(nhap);
+    let txt=Array.from(nhap);
+    document.getElementById('kq').innerHTML="Dãy nhập vào có "+txt.length+" ký tự";
+  }
+</script>
+</html>

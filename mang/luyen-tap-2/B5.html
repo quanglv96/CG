@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="button" value="Play" onclick="play()"/>
+<p>Dãy 1 đã nhập</p>
+<p id="nhap1"/>
+<p>Dãy 2 đã nhập</p>
+<p id="nhap2"/>
+<p id="kq"></p>
+<body>
+
+</body>
+<script>
+    function play() {
+        let day1 = prompt("Nhập dãy 1 ");
+        let day2 = prompt("Nhập dãy 2 ");
+        document.getElementById('nhap1').innerHTML = "'" + day1 + "'";
+        document.getElementById('nhap2').innerHTML = "'" + day2 + "'";
+        let D1 = day1.split(" ")
+        console.log(D1)
+        let D2 = day2.split(" ")
+        console.log(D1)
+        if (D1.length != D2.length) {
+            document.getElementById('kq').innerHTML = "2 dãy không giống nhau";
+        }
+        for (let i = 0; i <= D1.length; i++)
+            if (D1[i] !== D2[i]) {
+                document.getElementById('kq').innerHTML = "2 dãy không giống nhau";
+                break;
+            }
+    }
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="button" value="Play" onclick="play()"/>
+<p id="nhap"/>
+<p id="kq"></p>
+<body>
+</body>
+<script>
+    function play() {
+        let nhap= prompt("Dãy chữ nhập vào")
+        let x = nhap.split(" ")
+        console.log(x)
+        document.getElementById('kq').innerHTML = "Dãy nhập vào có " + x.length + " từ";
+        document.getElementById('nhap').innerHTML = x.join(" ");
+    }
+</script>
+</html>

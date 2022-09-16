@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="button" value="Play" onclick="play()"/>
+<p>Dãy đã nhập</p>
+<p id="nhap"/>
+<p id="kq"></p>
+<body>
+</body>
+<script>
+    function play() {
+        let day = prompt("Nhập dãy");
+        document.getElementById('nhap').innerHTML = "'" + day + "'";
+        let txt=Array.from(day)
+        for(i=0;i<=txt.length;i++){
+            if(txt[i]==="-"){
+                txt[i]="_"
+            }
+        }
+        document.getElementById('kq').innerHTML =txt.join("")
+    }
+</script>
+</html>
