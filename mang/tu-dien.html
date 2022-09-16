@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<h2>"apple","banana","orange","mango","lemon"</h2>
+<input type="text" id="nhap"/>
+<input type="button" value="Dịch" onclick="dich()"/>
+<p id="kq"></p>
+<body>
+<script>
+  function dich(){
+    let TA=["apple","banana","orange","mango","lemon"]
+    let TV=["Quả Táo","Quả Chuối","Quả Cam","Quả Xoài","Quả Chanh"]
+    let a= document.getElementById('nhap').value;
+    let i=0
+    for (;i<=TA.length;i++){
+      ta=TA[i]
+      if(a===ta){
+        kq=TV[i];
+        document.getElementById('kq').innerHTML=kq;
+        break;
+      }
+    }
+    if(i>TA.length){
+      document.getElementById('kq').innerText="không có kết quả phù hợp";
+    }
+  }
+</script>
+
+</body>
+</html>
