@@ -11,38 +11,35 @@
 <div id="show"></div>
 </body>
 <script>
-function phantich(){
-    let ABC=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-    let abc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    let a=document.getElementById('nhapchu').value;
-    let tx=Array.from(a);
-    let kq=[]
+function phantich() {
+    let ABC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    let abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let a = document.getElementById('nhapchu').value;
+    let tx = Array.from(a);
+    let kq = []
     // document.getElementById('show').innerHTML= tx.join("-");
-    for (let i=0; i<=tx.length;i++){
-        b=tx[i];
-        if (b===" "){
-            kq[i]=" ";
+    for (let i = 0; i <= tx.length; i++) {
+        b = tx[i];
+        if (b === " ") {
+            kq[i] = " ";
             continue;
         }
-        for(let j=0;j<=ABC.length;j++){
-            J=ABC[j]
-            if(b===J){
-                b=abc[j];
-                kq[i]=b;
-                continue;
+        for (let j = 0; j <= ABC.length; j++) {
+            J = ABC[j]
+            if (b === J) {
+                b = abc[j];
+                kq[i] = b;
+                break;
             }
-        }
-        for(let z=0;z<=abc.length;z++) {
-            Z=abc[z]
+            Z = abc[j]
             if (b === Z) {
-                b = ABC[z];
-                kq[i]=b;
-                continue;
+                b = ABC[j];
+                kq[i] = b;
+                break;
             }
         }
     }
-    document.getElementById('show').innerHTML= kq.join("");
-
+    document.getElementById('show').innerHTML = kq.join("");
 }
 </script>
 </html>
