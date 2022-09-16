@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+  let SN=[];
+  let max=0;
+  let Tong=0
+  let j=0
+  let i=0
+  for(;i<10;i++) {
+    SN[i] = Math.floor(Math.random() * 100);
+    if (SN[i]>max){
+      max=SN[i]
+      j=i+1;
+    }
+    Tong+=SN[i]
+  }
+  TB=Tong/i
+  document.write(SN.join("<br>")+"<br>");
+  document.write("Số lớn nhất là số "+ max +" ở vị trí thứ "+j+" trong dãy số"+"<br>");
+  document.write("Trung bình của dãy số là "+TB);
+</script>
+</html>

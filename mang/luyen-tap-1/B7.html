@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<table>
+    <tr>
+        <td>Giá trị của V muốn kiểm tra</td>
+        <td><input type="text" id="gtriV"/></td>
+    </tr>
+    <tr>
+        <td><br></td>
+    </tr>
+    <tr>
+        <td><input type="button" Value="Tạo dãy ngẫu nhiên" onclick="tao()"/></td>
+        <td><p id="dayrandom"></p></td>
+    </tr>
+    <tr>
+        <td><p id="kq"></p></td>
+    </tr>
+</table>
+<body>
+
+</body>
+<script>
+    function tao() {
+        let Rand = []
+        let KQ = []
+        for (let i = 0; i < 10; i++) {
+            Rand[i] =  Math.floor(Math.random() * 10)
+        }
+        document.getElementById('dayrandom').innerHTML = Rand.join(", ");
+        V = +document.getElementById('gtriV').value;
+        for (let i = 0; i <Rand.length; i++) {
+            if (V === Rand[i]) {
+                Rand.push(0)
+                continue;
+            }
+            KQ.push(Rand[i])
+        }
+        document.getElementById('kq').innerHTML=KQ.join(", ")
+    }
+</script>
+</html>

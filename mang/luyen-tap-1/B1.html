@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo số nguyên</title>
+</head>
+
+<body>
+</body>
+<script>
+  let SN=[];
+  // let check=[]
+  let check=" ";
+  for(let i=0;i<10;i++) {
+    SN[i] = Math.floor(Math.random() * 100)
+      if (SN[i]>=10){
+          check+= SN[i]+" ";
+      }
+  }
+  // for (let j=0;j<=SN.length;j++){
+  //     if (SN[j]>=10){
+  //         check.push(SN[j])
+  //     }
+  // }
+  document.write(SN.join("<br>")+"<br>"+"Các số lớn hơn 10 là "+check)
+  // document.write(SN.join("<br>")+"<br>"+"Các số lớn hơn 10 là "+check.join(" "))
+</script>
+</html>

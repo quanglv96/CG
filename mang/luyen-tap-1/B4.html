@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo/ nhập</title>
+</head>
+<tr>
+    <td><h3>Khởi tạo</h3></td>
+    <td><p id="khoitao"></p></td>
+</tr>
+<tr>
+    <td><h3>Đảo ngược dãy khởi tạo </h3></td>
+    <td><p id="daonguockt"></p></td>
+</tr>
+<tr>
+    <td><h3>Nhập</h3></td>
+    <td><input type="text" id="nhap"/></td>
+</tr>
+<tr>
+    <td><input type="button" value="Đảo ngược" onclick="dao()"/></td>
+</tr>
+<tr>
+    <td><h3>Đảo ngược dãy nhập </h3></td>
+    <td></ts><p id="daonguocnhap"></p></td>
+</tr>
+<body>
+</body>
+<script>
+    // khởi tạo
+    let SNKT = [];
+    let daonguocKT = [];
+    for (let i = 0; i < 10; i++) {
+        SNKT[i] = Math.floor(Math.random() * 100)
+    }
+    for (let i = 10; i >= 0; i--) {
+        a = SNKT[i]
+        daonguocKT.push(a);
+    }
+    document.getElementById('daonguockt').innerText = daonguocKT.join(" ")
+    document.getElementById('khoitao').innerText = SNKT.join(" ")
+    // nhập
+    let daonguocN = []
+    function dao() {
+        let b = document.getElementById('nhap').value;
+        console.log(b)
+        let SNN = Array.from(b)
+        console.log(SNN.join(" "))
+        for (let i = 10; i >= 0; i--) {
+            a = SNN[i]
+            daonguocN.push(a);
+        }
+        document.getElementById('daonguocnhap').innerText = daonguocN.join(" ")
+    }
+</script>
+</html>

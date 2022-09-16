@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số chữ nguyên âm trong 1 chuỗi</title>
+</head>
+<h1>Nhập chữ cần kiểm tra</h1>
+<input type="text" id="nhap"/>
+<input type="button" value="Kiểm tra" onclick="check()"/>
+<p id="kq"></p>
+<body>
+
+
+</body>
+<script>
+    function check() {
+        let NAM = ["u","e","o","a","i"]
+        let txt =document.getElementById('nhap').value;
+        let chuoi=Array.from(txt);
+        let count=0
+        for(j=0;j<=chuoi.length;j++){
+            for (let z=0;z<5;z++){
+                if (txt[j]===NAM[z]){
+                    count++
+                }
+            }
+        }
+        document.getElementById('kq').innerHTML="Số chữ nguyên âm trong chữ "+txt+" là "+ count;
+    }
+</script>
+</html>

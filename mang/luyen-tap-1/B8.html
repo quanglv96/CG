@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<table>
+    <tr>
+        <td><input type="button" Value="Tạo dãy ngẫu nhiên" onclick="tao()"/></td>
+        <td><p id="dayrandom"></p></td>
+    </tr>
+    <tr>
+        <td><p id="kq"></p></td>
+    </tr>
+</table>
+<body>
+
+</body>
+<script>
+    function tao() {
+        let Rand = []
+        let KQ = []
+        for (let i = 0; i < 10; i++) {
+            Rand[i] = Math.floor(Math.random() * 10)
+        }
+        document.getElementById('dayrandom').innerHTML = Rand.join();
+        Rand.sort();
+        console.log(Rand)
+        for (let i=Rand.length-1;i>=0;i--){
+            a=Rand[i];
+            KQ.push(a);
+        }
+        document.getElementById('kq').innerHTML = KQ.join();
+    }
+</script>
+</html>

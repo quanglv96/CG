@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let V=prompt("Nhập 1 số bất kì");
+  console.log(V)
+  let SN=[];
+  let count=0
+  for(let i=0;i<10;i++) {
+    SN[i] = Math.floor(Math.random() * 100)
+    if (V===SN[i]) {
+      count = 1;
+    }
+  }
+  console.log(SN);
+  if (count===1){
+    alert(V + "is in the array")
+    // document.write(V + "is in the array")
+  } else {
+    // document.write(V + "is not in the array")
+    alert(qV + "is not in the array")
+  }
+
+
+</script>
+</html>
