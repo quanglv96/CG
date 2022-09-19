@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  function MtoF(numMeter){
+    let foot= 3.279*numMeter;
+    return foot
+  }
+  function FtoM(numFoot){
+    let meter= 0.305*numFoot;
+    return meter
+  }
+  let numMeter=prompt("Nhập giá trị Meter muốn đổi sang Foot");
+  document.write(numMeter + " meter " + "= " + MtoF(numMeter) + " foot"+"<br>");
+  let numFoot=prompt("Nhập giá trị Foot muốn đổi sang Meter");
+  document.write(numFoot + " foot " + "= " + FtoM(numFoot) + " meter");
+</script>
+</html>
