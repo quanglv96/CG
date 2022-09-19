@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính cộng trừ</title>
+</head>
+<table>
+  <input type="text" id="num1" placeholder="Nhâp số thứ nhất"/>
+  <input type="text" id="num2" placeholder="Nhập số thứ hai"/>
+  <input type="button" value="Cộng" onclick="cong()"/>
+  <input type="button" value="Trừ" onclick="tru()"/>
+  <p>Result:</p>
+  <p id="kq"></p>
+</table>
+<body>
+
+</body>
+<script>
+  function cong(){
+    let a=+document.getElementById('num1').value;
+    let b=+document.getElementById('num2').value;
+    let c=a+b
+    document.getElementById('kq').innerHTML="Result is "+c;
+  } function tru(){
+    let a=+document.getElementById('num1').value;
+    let b=+document.getElementById('num2').value;
+    let c=a-b
+    document.getElementById('kq').innerHTML="Result is "+c;
+  }
+</script>
+</html>
