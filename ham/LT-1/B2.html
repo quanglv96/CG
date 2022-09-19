@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="number" id="num" oninput="play()" onchange="play()"/>
+<p id="kq"></p>
 </body>
+<script>
+    function play(){
+        let Num=+document.getElementById('num').value;
+        sum=Num+1
+        document.getElementById('kq').innerHTML=sum;
+    }
+</script>
 </html>

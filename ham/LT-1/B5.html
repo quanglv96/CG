@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    let txt = prompt("Nhập tên ngôi sao cần tìm")
+    let a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    let count=0
+    check(a, b)
+    function check(a, b) {
+        for (let i = 0; i < a.length; i++) {
+            if (txt === a[i]) {
+                document.write(b[i])
+                count=1
+            }
+        }
+        if (count===0){
+            document.write("Không tìm thấy ngôi sao nào")
+        }
+    }
+
+</script>
 </html>
