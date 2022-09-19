@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính nâng cao</title>
+</head>
+<input type="text" id="view"></input>
+<table>
+    <tr>
+        <td><input type="button" value="1" onclick="num(this.value)"></td>
+        <td><input type="button" value="2" onclick="num(this.value)"></td>
+        <td><input type="button" value="3" onclick="num(this.value)"></td>
+        <td><input type="button" value="+" onclick="num(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="num(this.value)"></td>
+        <td><input type="button" value="5" onclick="num(this.value)"></td>
+        <td><input type="button" value="6" onclick="num(this.value)"></td>
+        <td><input type="button" value="-" onclick="num(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="num(this.value)"></td>
+        <td><input type="button" value="8" onclick="num(this.value)"></td>
+        <td><input type="button" value="9" onclick="num(this.value)"></td>
+        <td><input type="button" value="*" onclick="num(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="reset" value="AC" onclick="AC(this.value)"></td>
+        <td><input type="button" value="0" onclick="num(this.value)"></td>
+        <td><input type="button" value="=" onclick="kq(this.value)"></td>
+        <td><input type="button" value="/" onclick="num(this.value)"></td>
+    </tr>
+</table>
+<body>
+
+</body>
+<script>
+    let view = document.getElementById("view");
+
+    function num(value) {
+        view.value += value;
+    }
+    function kq() {
+        let kq = eval(view.value);
+        view.value = kq;
+    }
+    function AC(value) {
+        view.value = ""
+    }
+</script>
+</html>
