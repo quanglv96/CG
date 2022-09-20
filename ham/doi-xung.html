@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let txt=prompt('Nhập vào 1 dãy')
+  let arr=Array.from(txt)
+  let count=0
+  let n=parseInt(arr.length)
+  isPalindrome()
+  function isPalindrome(){
+    for(let i=0;i<n/2;i++){
+      if(arr[i]!==arr[n-i-1]){
+        count=1
+        alert("False")
+      }
+    }
+    if (count===0){
+      alert("True")
+    }
+  }
+</script>
+</html>
