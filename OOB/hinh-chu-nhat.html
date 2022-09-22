@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #070606;">
+</canvas>
+</body>
+<script>
+    class Rectangle{
+        constructor(length,width) {
+            this.length=length;
+            this.width=width;
+        }
+        get Area(){
+            return this.width*this.length;
+        }
+        get Per(){
+            return 2*(this.width+this.length);
+        }
+    }
+    function print(){
+        let ctx=document.getElementById('myCanvas').getContext("2d");
+        let rect= new Rectangle(150,75)
+        ctx.fillStyle="#FF250";
+        ctx.fillRect(300,100,rect.length,rect.width);
+        ctx.font="30px Arial";
+        ctx.fillText("Diện tích là "+rect.Area,300,300)
+        ctx.fillText("Chu vi là "+rect.Per,300,400)
+    }
+    print()
+</script>
+</html>
