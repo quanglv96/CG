@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c
+        }
+
+        get F() {
+            return this.c * 1.8 + 32
+        }
+
+        get K() {
+            return this.c + 273.15
+        }
+    }
+    let num = +prompt("Giá trị độ C muốn chuyển đổi")
+    let temp = new Temperature(num)
+    document.write("Nhiệt độ F: "+ temp.F+"<br>")
+    document.write("Nhiệt độ K: "+ temp.K)
+</script>
+</html>
