@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Human {
+        constructor(name, gender, weight,apple) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            this.apple=apple
+        }
+        set Weight(weight){
+            this.weight=weight
+        }
+        get Weight(){
+            return this.weight
+        }
+        set Apple(apple){
+            this.apple=apple
+        }
+        get Apple(){
+            return this.apple
+        }
+        get Eatapple(){
+            if(this.apple >0){
+                this.apple=this.apple-1;
+                this.weight=this.weight+1;
+                this.weight;
+                this.apple;
+                return document.write(this.name+ " ăn táo <br> Quả táo còn: "+this.apple+"<br> Cân nặng của "+ this.name+" là "+this.weight+"kg<br>--------<br>")
+
+            }else{
+                document.write(this.name+" đã ăn hết táo");
+            }
+        }
+        get Addapple(){
+            this.apple=this.apple+10
+            this.apple;
+            document.write( this.name+" lấy thêm 1 quả táo <br>")
+        }
+    }
+    let Adam=new Human("Adam","Boy",70,10)
+    console.log(Adam)
+    let Eva=new Human("Eva","Girl",50,10)
+    console.log(Eva)
+    Adam.Eatapple;
+    Adam.Addapple;
+    Adam.Eatapple;
+
+
+
+</script>
+</html>
