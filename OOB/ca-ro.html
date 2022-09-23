@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        align-items: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    button {
+        border-collapse: collapse;
+        width: 25px;
+        height: 25px;
+    }
+
+</style>
+<h2>Bảng</h2>
+<table id="tab"></table>
+<body>
+<script>
+    //tạo bảng button
+    let table = []
+    let demo = []
+    for (let i = 0; i < 20; i++) {
+        demo[i] = "";
+        for (let j = 0; j < 20; j++) {
+            // table[[i][j]] = "<td id='" + i  + j + "'>" + "<button value=" + i  + j + " onclick='tich(this.value)'/>" + "</td>";
+            if (j<10){
+                var zj="0"+j
+            }else {
+                var zj=j
+            }
+            table[[i][j]] = "<td id='" + i +"." + zj + "'>" + "<button value=" + i +"." + zj + " onclick='tich(this.value)'/>" + "</td>";
+            demo[i] += table[[i][j]]
+
+        }
+        demo[i] = "<tr>" + demo[i] + "</tr>"
+    }
+    document.getElementById('tab').innerHTML = demo.join("")
+    let n=demo.length
+    console.log(n)
+    /// check tích X hoặc O
+    let VTriX = []
+    let VTriO = []
+    function tich(value) {
+        console.log(value)
+        if (VTriX.length === VTriO.length) {
+            document.getElementById(value).innerHTML = "X"
+            console.log(value)
+            VTriX.push(Number(value))
+            console.log(VTriX.join("- "))
+            checkx()
+        } else {
+            document.getElementById(value).innerHTML = "O"
+            VTriO.push(Number(value))
+            console.log(VTriO.join("- "))
+            checko()
+        }
+    }
+    function checkx() {
+        VTriX.sort();
+        console.log(VTriX.join("-"))
+        //check ngang
+        for (let i = 0; i <= VTriX.length; i++) {
+            let countx = 0
+            let num= 0.01
+            let a = +Number(VTriX[i]).toFixed(2)
+            let b = +Number(VTriX[i + 1]-num).toFixed(2)
+            let c = +Number(VTriX[i + 2]-num*2).toFixed(2)
+            let d = +Number(VTriX[i + 3]-num*3).toFixed(2)
+            let e = +Number(VTriX[i + 4]-num*4).toFixed(2)
+            // console.log(a)
+            // console.log(b)
+            // console.log(c)
+            // console.log(d)
+            // console.log(e)
+            if (a===b && a===c && a===d && a===e) {
+                countx=1
+            }
+            if (countx === 1) {
+                alert("X win");
+                break;
+            }
+        }
+        //check dọc
+        for (let i = 0; i <= VTriX.length; i++) {
+            let countx = 0
+            let num= 1
+            let a = +Number(VTriX[i]).toFixed(2)
+            let b = +Number(VTriX[i + 1]-num).toFixed(2)
+            let c = +Number(VTriX[i + 2]-num*2).toFixed(2)
+            let d = +Number(VTriX[i + 3]-num*3).toFixed(2)
+            let e = +Number(VTriX[i + 4]-num*4).toFixed(2)
+            // console.log(a)
+            // console.log(b)
+            // console.log(c)
+            // console.log(d)
+            // console.log(e)
+            if (a===b && a===c && a===d && a===e) {
+                countx=1
+            }
+            if (countx === 1) {
+                alert("X win");
+                break;
+            }
+        }
+        //check chéo lên
+        for (let i = 0; i <= VTriX.length; i++) {
+            let countx = 0
+            let num= 1.01
+            let a = +Number(VTriX[i]).toFixed(2)
+            let b = +Number(VTriX[i + 1]-num).toFixed(2)
+            let c = +Number(VTriX[i + 2]-num*2).toFixed(2)
+            let d = +Number(VTriX[i + 3]-num*3).toFixed(2)
+            let e = +Number(VTriX[i + 4]-num*4).toFixed(2)
+            console.log(a)
+            console.log(b)
+            console.log(c)
+            console.log(d)
+            console.log(e)
+            if (a===b && a===c && a===d && a===e) {
+                countx=1
+            }
+            if (countx === 1) {
+                alert("X win");
+                break;
+            }
+        }
+    }
+    function checko() {
+        VTriX.sort();
+        console.log(VTriO.join("-"))
+        //check ngang
+        for (let i = 0; i <= VTriO.length; i++) {
+            let countO = 0
+            let num= 0.01
+            let a = +Number(VTriO[i]).toFixed(2)
+            let b = +Number(VTriO[i + 1]-num).toFixed(2)
+            let c = +Number(VTriO[i + 2]-num*2).toFixed(2)
+            let d = +Number(VTriO[i + 3]-num*3).toFixed(2)
+            let e = +Number(VTriO[i + 4]-num*4).toFixed(2)
+            // console.log(a)
+            // console.log(b)
+            // console.log(c)
+            // console.log(d)
+            // console.log(e)
+            if (a===b && a===c && a===d && a===e) {
+                countO=1
+            }
+            if (countO === 1) {
+                alert("O win");
+                break;
+            }
+        }
+        //check dọc
+        for (let i = 0; i <= VTriO.length; i++) {
+            let countO = 0
+            let num= 1
+            let a = +Number(VTriO[i]).toFixed(2)
+            let b = +Number(VTriO[i + 1]-num).toFixed(2)
+            let c = +Number(VTriO[i + 2]-num*2).toFixed(2)
+            let d = +Number(VTriO[i + 3]-num*3).toFixed(2)
+            let e = +Number(VTriO[i + 4]-num*4).toFixed(2)
+            // console.log(a)
+            // console.log(b)
+            // console.log(c)
+            // console.log(d)
+            // console.log(e)
+            if (a===b && a===c && a===d && a===e) {
+                countO=1
+            }
+            if (countO === 1) {
+                alert("O win");
+                break;
+            }
+        }
+        //check chéo lên
+        for (let i = 0; i <= VTriO.length; i++) {
+            let countO = 0
+            let num= 1.01
+            let a = +Number(VTriO[i]).toFixed(2)
+            let b = +Number(VTriO[i + 1]-num).toFixed(2)
+            let c = +Number(VTriO[i + 2]-num*2).toFixed(2)
+            let d = +Number(VTriO[i + 3]-num*3).toFixed(2)
+            let e = +Number(VTriO[i + 4]-num*4).toFixed(2)
+            console.log(a)
+            console.log(b)
+            console.log(c)
+            console.log(d)
+            console.log(e)
+            if (a===b && a===c && a===d && a===e) {
+                countO=1
+            }
+            if (countO === 1) {
+                alert("O win");
+                break;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
