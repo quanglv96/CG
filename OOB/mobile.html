@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th {
+        text-align: center;
+        width: 1000px;
+    }
+
+    td {
+        text-align: left;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <th style="width:500px">NOKIA</th>
+        <th style="width: 500px">IPHONE</th>
+    </tr>
+    <tr>
+        <td id="NKturn"><input type="button" id="turnOnNokia" onclick="onNokia()" value="Turn ON"/></td>
+        <td id="IPturn"><input type="button" id="turnOnIP" onclick="onIP()" value="Turn ON"/></td>
+    </tr>
+    <tr>
+        <td>
+            <div id="showNK"></div>
+        </td>
+        <td>
+            <div id="showIP"></div>
+        </td>
+    </tr>
+</table>
+</body>
+<script>
+    class mobile {
+        constructor(Pin,demoMess,formMess,sendMess) {
+            this.Pin = Pin;
+            this.demoMess = demoMess;
+            this.formMess = formMess;
+            this.sendMess = sendMess;
+        }
+
+        get on() {
+            this.turnon
+            return "ON"
+        }
+
+        get off() {
+            this.turnon
+            return "OFF"
+        }
+
+        get turnon() {
+            return "Turn ON"
+        }
+
+        get turnoff() {
+            this.turnon
+            return "Turn OFF"
+        }
+
+        set pin(Pin) {
+            this.Pin=Pin;
+        }
+        get pin(){
+            return this.Pin;
+        }
+
+        set demomess(demoMess) {
+            this.turnon
+            this.demoMess = demoMess;
+        }
+
+        set sendmess(sendMess) {
+            this.turnon
+            this.sendMess = sendMess
+        }
+
+        set frommess(fromMess) {
+            this.turnon
+            this.formMess = fromMess
+        }
+        get frommess() {
+            this.turnon
+            return this.formMess
+        }
+
+        set sendmess(sendMess) {
+            this.turnon
+            this.sendMess = sendMess
+        }
+
+        get sendmess() {
+            this.turnon
+            return this.sendMess
+        }
+    }
+    // bật nokia
+    let NK = new mobile(100,"","Tin nhắn gửi đi","Tin nhắn đến ");
+    console.log(NK)
+
+    function onNokia() {
+        let NKshowpin = "<table><tr id=NKpin><td>Pin</td></tr>";
+        let NKdemomess = "<br><tr><td id='NKdemomess'>Soạn tin nhắn<textarea></textarea></td></tr>";
+        let NKsavedemo = "<br><tr><td><input type='button' value='Lưu tin nháp' onclick='NKsave()'></td></tr>";
+        let NKguimessdemo = "<br><tr><td><input type='button' value='Gửi tin nhắn đến IP' onclick='NKsendIP()'></td></tr>";
+        let NKfrommess = "<br><tr><td id='NKfrommess'><input type='button' value='Hộp thư đến' onclick='NKshowfrommess()'/></td></tr>"
+        let NKshowfrom = "<br><tr ><td id='NKshowfrom' ></td></tr>"
+        let NKsendmess = "<br><tr><td id='NKsendmess'><input type='button' value='Hộp thư đã gửi' onclick='NKshowsendmess()'/></td></tr>"
+        let NKshowsend = "<br><tr><td id=NKshowsend></td></tr>"
+        show = NKshowpin + NKdemomess + NKsavedemo + NKguimessdemo + NKfrommess + NKshowfrom + NKsendmess+ NKshowsend + "</tr></table>"
+        document.getElementById('showNK').innerHTML = show;
+        document.getElementById('NKpin').innerHTML = "Pin: " + NK.pin + "%";
+        document.getElementById('NKturn').innerHTML = "<input type='button' onclick='offNokia()' value='Turn OFF'/>"
+    }
+    // tắt nokia
+    function offNokia() {
+        document.getElementById('showNK').innerHTML = "";
+        document.getElementById('NKturn').innerHTML = '<input type="button" id="turnOnNokia" onclick="onNokia()" value="Turn ON"/>';
+    }
+
+    // bật ip
+    let IP = new mobile(100, "","Tin nhắn gửi đi","Tin nhắn đến ");
+    console.log(IP)
+
+    function onIP() {
+        let IPshowpin = "<table><tr><td id='IPpin'>Pin</td></tr>";
+        let IPdemomess = "<br><tr><td id=IPdemomess>Soạn tin nhắn<textarea></textarea></td></tr>";
+        let IPsavedemo = "<br><tr><td><input type='button' value='Lưu tin nháp' onclick='IPsave()'></td></tr>";
+        let IPguimessdemo = "<br><tr><td><input type='button' value='Gửi tin nhắn đến NOKIA' onclick='IPsendNK()'></td></tr>";
+        let IPfrommess = "<br><tr><td id=IPfrommess><input type='button' value='Hộp thư đến' onclick='IPshowfrommess()'/></td></tr>"
+        let IPshowfrom = "<br><tr><td id=IPshowfrom></td></tr>"
+        let IPsendmess = "<br><tr><td id=IPsendmess><input type='button' value='Hộp thư đã gửi' onclick='IPshowsendmess()'/></td></tr>"
+        let IPshowsend = "<br><tr><td id=IPshowsend></td></tr>"
+        show = IPshowpin + IPdemomess + IPsavedemo + IPguimessdemo + IPfrommess+ IPshowfrom + IPsendmess +IPshowsend + "</tr></table>"
+        document.getElementById('showIP').innerHTML = show;
+        document.getElementById('IPpin').innerHTML = "Pin " + IP.pin + "%";
+        document.getElementById('IPturn').innerHTML = "<input type='button' onclick='offIP()' value='Turn OFF'/>"
+    }
+
+    // tắt ip
+    function offIP() {
+        document.getElementById('showIP').innerHTML = "";
+        document.getElementById('IPturn').innerHTML = '<input type="button" id="turnOnIP" onclick="onIP()" value="Turn ON"/>';
+    }
+
+    // gửi tin nhắn
+    function IPsendNK() {
+        let c = prompt("Soạn tin nhắn gửi cho Nokia")+ "<br>";
+        if (c !== "") {
+            alert("Nokia có 1 tin nhắn mới ở Hộp thư đến")
+            NK.formMess ="Tin nhắn đến: "+ c ;
+            IP.sendMess ="Tin nhắn đã gửi: " +c;
+            NK.formMess;
+            IP.sendMess;
+        } else {
+            alert("Không có nội dung tin nhắn")
+        }
+    }
+    function NKsendIP() {
+        let c = prompt("Soạn tin nhắn gửi cho Iphone");
+        if (c !== "") {
+            alert("Iphone có 1 tin nhắn mới ở Hộp thư đến")
+            IP.formmess = "Tin nhắn đến: "+c;
+            console.log(IP.formmess)
+            NK.sendmess= "Tin nhắn đã gửi: "+ c;
+            console.log(NK.sendmess)
+        } else {
+            alert("Không có nội dung tin nhắn")
+        }
+    }
+    //nhận tin nhắn
+    function NKshowfrommess() {
+        let cc= NK.formMess
+        document.getElementById('NKshowfrom').innerHTML= cc;
+    }
+    function IPshowfrommess() {
+        let cc= IP.formMess
+        document.getElementById('IPshowfrom').innerHTML= cc;
+    }
+
+    //lưu tin nhắn nháp
+    function IPsave() {
+        let messdemoip= document.getElementById('IPdemomess').value;
+        IP.demoMess=messdemoip
+        IP.demoMess;
+        alert("Đã lưu tin nhắn nháp")
+    }
+
+    function NKsave() {
+        let messdemonk= document.getElementById('NKdemomess').value;
+        NK.demoMess=messdemonk
+        NK.demoMess;
+        alert("Đã lưu tin nhắn nháp")
+    }
+    // show tin nhắn đã gửi
+    function IPshowsendmess() {
+        document.getElementById('IPshowsend').innerHTML= IP.sendMess;
+    }
+
+    function NKshowsendmess() {
+        document.getElementById('NKshowsend').innerHTML= NK.sendMess;
+    }
+</script>
+</html>
