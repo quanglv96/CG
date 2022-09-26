@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    td {
+        padding: 6px;
+        width: 5%;
+        height: 5%;
+    }
+</style>
+<table>
+    <tr>
+        <td colspan="3"><p>HƯƠNG CHACO</p></td>
+        <th colspan="6" rowspan="6" id="show"></form></th>
+    </tr>
+    <tr>
+        <td  colspan="2" style="text-align: left">Kênh đang chiếu</td>
+        <td id="view" style="text-align: right"></td>
+    </tr>
+    <tr>
+        <td  colspan="2" style="text-align: left">Âm lượng</td>
+        <td style="text-align: right"></td>
+    </tr>
+    <tr id="onoff">
+        <td>
+            <button value=ON onclick="turnON(this.value)"/>
+            ON
+        </td>
+        <td></td>
+        <td>
+            <button value="OFF" onclick="turnOFF(this.value)"/>
+            OFF
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="K1()"/>
+            1
+        </td>
+        <td>
+            <button onclick="K2()"/>
+            2
+        </td>
+        <td>
+            <button onclick="K3()"/>
+            3
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="K4()"/>
+            4
+        </td>
+        <td>
+            <button onclick="K5()"/>
+            5
+        </td>
+        <td>
+            <button onclick="K6()"/>
+            6
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="K7()"/>
+            7
+        </td>
+        <td>
+            <button onclick="K8()"/>
+            8
+        </td>
+        <td>
+            <button onclick="K9()"/>
+            9
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="tangK()"/>
+            &#8743
+        </td>
+        <td></td>
+        <td>
+            <button onclick="tangvol()"/>
+            &#8743
+        </td>
+    </tr>
+    <tr>
+        <td>Kênh</td>
+        <td></td>
+        <td>Volume</td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="giamK()"/>
+            &#8744
+        </td>
+        <td></td>
+        <td>
+            <button onchange="giamvol(this.value)"/>
+            &#8744
+        </td>
+    </tr>
+</table>
+<body>
+<script>
+    let value = ""
+
+    function turnON() {
+        value = "ON"
+        console.log(value)
+    }
+
+    function turnOFF() {
+        value = "OFF"
+        console.log(value)
+        document.getElementById('show').innerHTML="";
+        document.getElementById('view').innerHTML="";
+        document.getElementById('vol').innerHTML="";
+    }
+    class Kenh {
+        constructor(num, nd) {
+            this.num = num;
+            this.nd = nd
+        }
+
+        set Num(num) {
+            this.num = num
+        }
+
+        get Num() {
+            return this.num
+        }
+
+        set ND(nd) {
+            this.nd = nd
+        }
+
+        get ND() {
+            return this.nd
+        }
+
+        get show() {
+            document.getElementById('show').innerHTML = this.nd;
+            document.getElementById('view').innerHTML = this.num;
+            return this.nd
+        }
+    }
+
+    let a = document.getElementById('onoff').value;
+    console.log(a)
+    let b = ""
+    let Kenh1 = new Kenh(1, b)
+    let Kenh2 = new Kenh(2, b)
+    let Kenh3 = new Kenh(3, b)
+    let Kenh4 = new Kenh(4, b)
+    let Kenh5 = new Kenh(5, b)
+    let Kenh6 = new Kenh(6, b)
+    let Kenh7 = new Kenh(7, b)
+    let Kenh8 = new Kenh(8, b)
+    let Kenh9 = new Kenh(9, b)
+
+    function K1() {
+        if (value === "ON") {
+            Kenh1.nd = '<iframe width="560" height="315" src="https://www.youtube.com/embed/NltnLRwEb-U?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            console.log(Kenh1.nd)
+            Kenh1.show
+        }
+    }
+
+    function K2() {
+        if (value === "ON") {
+            Kenh2.nd = '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ph0np9E4Mmo?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            console.log(Kenh2.nd)
+            Kenh2.show
+        }
+    }
+
+    function K3() {
+        if (value === "ON") {
+            Kenh3.nd = '<iframe width="560" height="315" src="https://www.youtube.com/embed/HOLLN9E2BIA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            console.log(Kenh3.nd)
+            Kenh3.show
+        }
+    }
+
+    function K4() {
+        if (value === "ON") {
+            Kenh4.nd = '<iframe width="560" height="315" src="https://www.youtube.com/embed/tPEpUf_naOA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            console.log(Kenh4.nd)
+            Kenh4.show
+        }
+    }
+
+    function K5() {
+        if (value === "ON") {
+            Kenh5.nd = '<iframe width="560" height="315" src="https://www.youtube.com/embed/goBD1QEdWOg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            console.log(Kenh5.nd)
+            Kenh5.show
+        }
+    }
+
+    function K6() {
+        if (value === "ON") {
+            Kenh6.nd = '<iframe width="560" height="315" src="https://www.youtube.com/embed/OLcH06fzwvo?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            console.log(Kenh4.nd)
+            Kenh6.show
+        }
+    }
+
+    function K7() {
+        if (value === "ON") {
+            Kenh7.nd = '<iframe width="560" height="315" src="https://www.youtube.com/embed/4dZ1DpBJO8c?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            console.log(Kenh7.nd)
+            Kenh7.show
+        }
+    }
+
+    function K8() {
+        if (value === "ON") {
+            Kenh8.nd = '<iframe width="560" height="315" src="https://www.youtube.com/embed/9IeMA75UrL0?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            console.log(Kenh8.nd)
+            Kenh8.show
+        }
+    }
+
+    function K9() {
+        if (value === "ON") {
+            Kenh9.nd = '<iframe width="560" height="315" src="https://www.youtube.com/embed/DuNhD41DDvw?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            console.log(Kenh9.nd)
+            Kenh9.show
+        }
+    }
+    function tangK() {
+        let n = +document.getElementById("view").innerHTML;
+        console.log(n)
+        n += 1;
+        switch (n) {
+            case 2:
+                K2()
+                break;
+            case 3:
+                K3()
+                break;
+            case 4:
+                K4()
+                break;
+            case 5:
+                K5()
+                break;
+            case 6:
+                K6()
+                break;
+            case 7:
+                K7()
+                break;
+            case 8:
+                K8()
+                break;
+            case 9:
+                K9()
+                break;
+            case 10:
+                K1()
+                break;
+        }
+    }
+    function giamK() {
+        let n = +document.getElementById("view").innerHTML;
+        console.log(n)
+        n -= 1;
+        switch (n) {
+            case 2:
+                K2()
+                break;
+            case 3:
+                K3()
+                break;
+            case 4:
+                K4()
+                break;
+            case 5:
+                K5()
+                break;
+            case 6:
+                K6()
+                break;
+            case 7:
+                K7()
+                break;
+            case 8:
+                K8()
+                break;
+            case 0:
+                K9()
+                break;
+            case 1:
+                K1()
+                break;
+        }
+    }
+    function tangvol(){
+        let audio_iframe = document.querySelector('iframe');
+
+        audio_iframe.tag
+    }
+
+</script>
+
+</body>
+</html>
