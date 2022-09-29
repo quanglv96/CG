@@ -1,4 +1,4 @@
-let Tomtat_dacnhantam = ` <div class="TomtatBook">
+<div >
         <p>
         <h3>Tóm tắt nội dung sách</h3></p>
         <p> Nội dung của cuốn sách đắc nhân tâm chủ yếu hướng đến nghệ thuật ứng xử cơ bản trong giao tiếp hàng ngày,
@@ -23,4 +23,4 @@ let Tomtat_dacnhantam = ` <div class="TomtatBook">
             nhiều độc giả trên toàn thế giới mến mộ, tâm đắc. Giá trị nghệ thuật có trong cuốn sách đắc nhân tâm được
             đánh giá rất cao, vừa sâu sắc uyên thâm, vừa thực tế, dễ hiểu.</p>
     </div>
-</div>`
+</div>

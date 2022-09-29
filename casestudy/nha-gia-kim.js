@@ -1,28 +1,4 @@
-let Booknhagiakim=`<div id="nha-gia-kim">
-  <table class="Infobook">
-  <tr>
-            <td colspan="5"><a href="trang-chu.html"><h3>Trang chủ:</h3></a></td>
-        </tr>
-    <tr>
-    <tr>
-      <th rowspan="4"><img src="pic/nha-gia-kim.jpg" style="width:350px ;height: 500px;padding-left: 400px"/></th>
-      <th >NHÀ GIẢ KIM</th>
-    </tr>
-    <tr>
-      <td>Tác giả: Paulo Coelho</td>
-    </tr>
-    <tr>
-      <td>Thể loại:<a onclick="sortBook('vanHoc')"> Văn học</a></td>
-    </tr>
-    <tr>
-      <td>
-        <form action="pdf/nha-gia-kim.pdf">
-          <button>Đọc PDF</button>
-        </form>
-      </td>
-    </tr>
-  </table>
-</div>
+let Tomtat_nhagiakim=`
 <div class="TomtatBook">
   <p>
   <h3>Tóm tắt nội dung sách</h3></p>

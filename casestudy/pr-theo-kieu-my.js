@@ -1,27 +1,4 @@
-let BookPRtheokieumy=`<div id="pr-theo-kieu-my">
-  <table class="Infobook">
-  <tr>
-  <td colspan="5"><a href="trang-chu.html"><h3>Trang chủ:</h3></a></td>
-    </tr>
-    <tr>
-      <th rowspan="4"><img src="pic/PRTKM.jpg" style="width:350px ;height: 500px;padding-left: 400px"/></th>
-      <th>PR Theo Kiểu Mỹ</th>
-    </tr>
-    <tr>
-      <td >Tác giả: Robert L. Dilenschneider</td>
-    </tr>
-    <tr>
-      <td>Thể loại: <a onclick="sortBook('kinhTe')">Kinh Tế</a></td>
-    </tr>
-    <tr>
-      <td>
-        <form action="pdf/pr-theo-kieu-my.pdf">
-          <button>Đọc PDF</button>
-        </form>
-      </td>
-    </tr>
-  </table>
-</div>
+let Tomtat_PRtheokieumy=`
 <div class="TomtatBook">
   <p>
   <h3>Tóm tắt nội dung sách</h3></p>

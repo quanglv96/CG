@@ -17,8 +17,8 @@ function seach() {
         if (j < checkname.length) {
             for (; j < n; j++) {
                 if (checkname[j] !== undefined) {
-                    show += checkname[j].showpic;
-                    tile += checkname[j].showtile;
+                    show += "<td class='topnav'><a onclick= 'showBook(" + j + ")'"+"><img src=" + Listnamebook[j].pic + " /></a></td>";
+                    tile += "<td>" + Listnamebook[j].tile + "</td>"
                 }
             }
         }

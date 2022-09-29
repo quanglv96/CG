@@ -1,27 +1,4 @@
-let Booktutotdenvidai = `<div id="tu-tot-den-vi-dai">
-  <table class="Infobook">
-  <tr>
-      <td colspan="5"><a href="trang-chu.html"><h3>Trang chủ:</h3></a></td>
-    </tr>
-    <tr>
-      <th rowspan="4"><img src="pic/tu-tot-den-vi-dai.jpg" style="width:350px ;height: 500px;padding-left: 400px"/></th>
-      <th>TỪ TỐT ĐẾN VĨ ĐẠI</th>
-    </tr>
-    <tr>
-      <td>Tác giả: Dale Carnegie</td>
-    </tr>
-    <tr>
-      <td>Thể loại:<a onclick="sortBook('lanhDao')"> Lãnh Đạo</a></td>
-    </tr>
-    <tr>
-      <td>
-        <form action="pdf/tu-tot-den-vi-dai.pdf">
-          <button>Đọc PDF</button>
-        </form>
-      </td>
-    </tr>
-  </table>
-</div>
+let Tomtat_tutotdenvidai = `
 <div class="TomtatBook">
   <p>
   <h3>Tóm tắt nội dung sách</h3></p>

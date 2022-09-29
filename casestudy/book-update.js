@@ -9,8 +9,8 @@ for (let i = 0; i < Listnamebook.length / 5; i++) {
     if (j < Listnamebook.length) {
         for (; j < n; j++) {
             if (Listnamebook[j] !== undefined) {
-                show += Listnamebook[j].showpic;
-                tile += Listnamebook[j].showtile
+                show += "<td class='topnav'><a onclick= 'showBook(" + j + ")'"+"><img src=" + Listnamebook[j].pic + " /></a></td>";
+                tile += "<td>" + Listnamebook[j].tile + "</td>"
             }
         }
     }

@@ -43,13 +43,12 @@ for(let i=0;i<4;i++){
     let c=parseInt(Math.floor(Math.random()*Listnamebook.length))
     let count=0
     for(let j=0;j<=Hndg.length;j++){
-        if (Listnamebook[c]=== Hndg[j]){
+        if (c=== Hndg[j]){
             count++
         }
     }
-
     if(count===0){
-        Hndg.push(Listnamebook[c]);
+        Hndg.push(c);
     }else{
         i--;
     }
@@ -58,13 +57,14 @@ function homnaydocgi() {
     let show = "<table class='tagHNDG'><td colspan=\"5\"><h3>Hôm nay đọc gì:</h3></td></tr><tr>"
     let tile = "<table class='tagHNDG'><tr>"
     for (let i = 0; i < Hndg.length; i++) {
-        show += Hndg[i].showpic
-        tile += Hndg[i].showtile
+        show += "<td class='topnav'><a onclick= 'showBook(" + Hndg[i] + ")'"+"><img src=" + Listnamebook[Hndg[i]].pic + " /></a></td>"
+        tile +="<td>" + Listnamebook[Hndg[i]].tile + "</td>"
     }
     document.getElementById('HNDG').innerHTML = show + tile + "</tr></table>";
 }
 homnaydocgi()
-function showBook(value) {
+
+function Dacnhantam() {
     document.getElementById("changeView").innerHTML=Bookdacnhantam;
 }
 function PRtheokieumy() {

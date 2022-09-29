@@ -1,27 +1,4 @@
-let Bookxaydungdetruongton = `<div>
-  <table class="Infobook">
-  <tr>
-            <td><a href="trang-chu.html"><h3>Trang chủ:</h3></a></td>
-        </tr>
-    <tr>
-      <th rowspan="4"><img src="pic/xay-dung-de-truong-ton.jpg" style="width:350px ;height: 500px;padding-left: 400px;"/></th>
-      <th >XÂY DỰNG ĐỂ TRƯỜNG TỒN</th>
-    </tr>
-    <tr>
-      <td>Tác giả: Jim Collins – Jerry I. Porras</td>
-    </tr>
-    <tr>
-      <td>Thể loại:<a onclick="sortBook('xayDung')">Xây Dựng Công Ty</a></td>
-    </tr>
-    <tr>
-      <td>
-        <form action="pdf/xay-dung-de-truong-ton.pdf">
-          <button>Đọc PDF</button>
-        </form>
-      </td>
-    </tr>
-  </table>
-</div>
+let Tomtat_xaydungdetruongton = `
 <div class="TomtatBook">
   <p><h3>Tóm tắt nội dung sách:</h3></p>
 <p> “Đây không phải là cuốn sách viết về các nhà lãnh đạo có tầm nhìn xa trông rộng, có sức thu hút lớn. Cũng không phải là cuốn sách viết về các sản phẩm, các khái niệm sản phẩm hay những thấu hiểu về thị trường mang tính chất có tầm nhìn xa. Cuốn sách này cũng không trình bày về các hoài bão của một doanh nghiệp. Mà đây chính là cuốn sách viết về cái gì đó quan trọng, trường tồn hơn nhiều – những công ty hàng đầu có tầm nhìn xa, hoài bão lớn”</p>
