@@ -1,11 +1,11 @@
-let Bookxaydungdetruongton=`<div>
+let Bookxaydungdetruongton = `<div>
   <table class="Infobook">
   <tr>
-            <td colspan="5"><a href="trang-chu.html"><h3>Trang chủ:</h3></a></td>
+            <td><a href="trang-chu.html"><h3>Trang chủ:</h3></a></td>
         </tr>
     <tr>
-      <th rowspan="4"><img src="pic/xay-dung-de-truong-ton.jpg" style="width:500px ;height: 500px;padding-left: 100px"/></th>
-      <th>XÂY DỰNG ĐỂ TRƯỜNG TỒN</th>
+      <th rowspan="4"><img src="pic/xay-dung-de-truong-ton.jpg" style="width:350px ;height: 500px;padding-left: 400px;"/></th>
+      <th >XÂY DỰNG ĐỂ TRƯỜNG TỒN</th>
     </tr>
     <tr>
       <td>Tác giả: Jim Collins – Jerry I. Porras</td>

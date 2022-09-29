@@ -4,7 +4,7 @@ let BookPRtheokieumy=`<div id="pr-theo-kieu-my">
   <td colspan="5"><a href="trang-chu.html"><h3>Trang chủ:</h3></a></td>
     </tr>
     <tr>
-      <th rowspan="4"><img src="pic/PRTKM.jpg" style="width:500px ;height: 500px;padding-left: 100px"/></th>
+      <th rowspan="4"><img src="pic/PRTKM.jpg" style="width:350px ;height: 500px;padding-left: 400px"/></th>
       <th>PR Theo Kiểu Mỹ</th>
     </tr>
     <tr>

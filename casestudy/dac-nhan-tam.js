@@ -4,8 +4,8 @@ let Bookdacnhantam= `<div id="bookdacnhantam">
             <td colspan="5"><a href="trang-chu.html"><h3>Trang chủ:</h3></a></td>
         </tr>
         <tr>
-            <th rowspan="4"><img src="pic/dac-nhan-tam.jpg" style="width:500px ;height: 500px;padding-left: 100px"/></th>
-            <th>ĐẮC NHÂN TÂM</th>
+            <th rowspan="4"><img src="pic/dac-nhan-tam.jpg" style="width:350px ;height: 500px;padding-left: 400px"/></th>
+            <th >ĐẮC NHÂN TÂM</th>
         </tr>
         <tr>
             <td>Tác giả: Dale Carnegie</td>

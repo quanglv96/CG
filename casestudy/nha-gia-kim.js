@@ -5,8 +5,8 @@ let Booknhagiakim=`<div id="nha-gia-kim">
         </tr>
     <tr>
     <tr>
-      <th rowspan="4"><img src="pic/nha-gia-kim.jpg" style="width:500px ;height: 500px;padding-left: 100px"/></th>
-      <th>NHÀ GIẢ KIM</th>
+      <th rowspan="4"><img src="pic/nha-gia-kim.jpg" style="width:350px ;height: 500px;padding-left: 400px"/></th>
+      <th >NHÀ GIẢ KIM</th>
     </tr>
     <tr>
       <td>Tác giả: Paulo Coelho</td>

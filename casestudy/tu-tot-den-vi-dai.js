@@ -4,7 +4,7 @@ let Booktutotdenvidai = `<div id="tu-tot-den-vi-dai">
       <td colspan="5"><a href="trang-chu.html"><h3>Trang chủ:</h3></a></td>
     </tr>
     <tr>
-      <th rowspan="4"><img src="pic/tu-tot-den-vi-dai.jpg" style="width:500px ;height: 500px;padding-left: 100px"/></th>
+      <th rowspan="4"><img src="pic/tu-tot-den-vi-dai.jpg" style="width:350px ;height: 500px;padding-left: 400px"/></th>
       <th>TỪ TỐT ĐẾN VĨ ĐẠI</th>
     </tr>
     <tr>
