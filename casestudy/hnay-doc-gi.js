@@ -37,12 +37,23 @@ class HNDG {
         return this.url;
     }
 }
+//radom sách gợi ý
 let Hndg = [];
-Hndg[0] = new HNDG("pic/PRTKM.jpg", "Pr Theo Kiểu Mỹ", "PRtheokieumy()")
-Hndg[1] = new HNDG("pic/dac-nhan-tam.jpg", "Đắc Nhân Tâm", "Dacnhantam()")
-Hndg[2] = new HNDG("pic/tu-tot-den-vi-dai.jpg", "Từ Tốt Đến Vĩ Đại", "Tutotdenvidai()")
-Hndg[3] = new HNDG("pic/nha-gia-kim.jpg", "Nhà Giả Kim", "Nhagiakim()")
-Hndg[4] = new HNDG("pic/xay-dung-de-truong-ton.jpg", "Xây Dựng Để Trường Tồn", "Xaydungtruongton()")
+for(let i=0;i<4;i++){
+    let c=parseInt(Math.floor(Math.random()*Listnamebook.length))
+    let count=0
+    for(let j=0;j<=Hndg.length;j++){
+        if (Listnamebook[c]=== Hndg[j]){
+            count++
+        }
+    }
+
+    if(count===0){
+        Hndg.push(Listnamebook[c]);
+    }else{
+        i--;
+    }
+}
 function homnaydocgi() {
     let show = "<table class='tagHNDG'><td colspan=\"5\"><h3>Hôm nay đọc gì:</h3></td></tr><tr>"
     let tile = "<table class='tagHNDG'><tr>"
@@ -53,7 +64,7 @@ function homnaydocgi() {
     document.getElementById('HNDG').innerHTML = show + tile + "</tr></table>";
 }
 homnaydocgi()
-function Dacnhantam() {
+function showBook(value) {
     document.getElementById("changeView").innerHTML=Bookdacnhantam;
 }
 function PRtheokieumy() {

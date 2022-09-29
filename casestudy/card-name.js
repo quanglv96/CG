@@ -1,5 +1,5 @@
 Cardname=`
-    <table>
+    <table style="padding-left: 100px">
         <tr>
             <th colSpan='5'> LƯU VINH QUANG</th>
         </tr>

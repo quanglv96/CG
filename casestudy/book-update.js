@@ -7,7 +7,6 @@ for (let i = 0; i < Listnamebook.length / 5; i++) {
     demo[i] = ""
     let n = j + 5
     if (j < Listnamebook.length) {
-        console.log(j)
         for (; j < n; j++) {
             if (Listnamebook[j] !== undefined) {
                 show += Listnamebook[j].showpic;
