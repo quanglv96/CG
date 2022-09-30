@@ -33,7 +33,7 @@ class Book {
     }
 }
 let Listnamebook = []
-Listnamebook[0] = new Book("kinhTe", 'pic/khoi-nghiep-ban-le.jpg', "Khởi Nghiệp Bán Lẻ", "Trần Thanh Phong",'','')
+Listnamebook[0] = new Book("kinhTe", 'pic/khoi-nghiep-ban-le.jpg', "Khởi Nghiệp Bán Lẻ", "Trần Thanh Phong",'5','')
 Listnamebook[1] = new Book("kinhTe", 'pic/phi-ly-tri.jpg', "Phi Lý Trí",'Dan Ariely','','' )
 Listnamebook[2] = new Book("kinhTe", 'pic/PRTKM.jpg', "Pr Theo Kiểu Mỹ", 'Robert L. Dilenschneider','pdf/pr-theo-kieu-my.pdf',Tomtat_PRtheokieumy)
 Listnamebook[3] = new Book("kinhTe", 'pic/nguoi-giau-nhat-thanh-babylon.jpg', "Người Giàu Nhất Thành Babylon",'George Samuel Clason','','' )

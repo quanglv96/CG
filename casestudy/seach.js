@@ -1,9 +1,10 @@
 function seach() {
+
     let txt = document.getElementById('Seach').value;
+    console.log(txt)
     let checkname=Listnamebook.filter(value => {
         return value.tile.toUpperCase().includes(txt.toUpperCase())
     })
-    console.log(checkname)
     let j=0
     let show=""
     let tile=""

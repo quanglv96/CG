@@ -1,9 +1,6 @@
 html {
     height: 100%;
 }
-view {
-    background-color: #ffffff;
-}
 div{
     padding-top: 2px;
 }
@@ -26,7 +23,6 @@ img {
     padding-left: 5px;
 }
 .topnav {
-    color: white;
     overflow: hidden;
 }
 a {
@@ -54,8 +50,8 @@ body {
 .Infobook {
     text-align: left;
     border-collapse: collapse;
-    padding-left: 300px;
-    padding-right: 400px;
+    /*padding-left: 300px;*/
+    /*padding-right: 400px;*/
 }
 .TomtatBook {
     text-align: justify;

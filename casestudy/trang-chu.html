@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Read Book</title>
 </head>
 <link rel="stylesheet" href="style.css">
 <body>
 
 <div class="header" >
     <table>
-        <tr>
-            <td colspan="5" style="text-align: left" ><a href="trang-chu.html"><img src="pic/bemin.png" style="float: left; width: 180px;height: 180px"/></a><h1 style="text-align: left;padding-top: 25px  ">Tủ sách Bang Chủ</h1></td>
+        <tr id="header">
+            <td colspan="5" style="text-align: left" ><a onclick="showDefault()"><img src="pic/bemin.png" style="float: left; width: 180px;height: 180px"/></a><h1 style="text-align: left;padding-top: 25px  ">Tủ sách Bang Chủ</h1></td>
+            <td id="login"><button onclick="Login()">Login</button></td>
         </tr>
         <tr>
             <td></td>
-            <td colspan="2" style="text-align: left "><input type="text" size="180" id="Seach"/></td>
-            <td><input type="button" onclick="seach()"value="Seach"/></td>
+            <td colspan="2" style="text-align: left "><input type="text" size="180" id="Seach" placeholder="Nhập từ khóa cần tìm kiếm"/></td>
+            <td style="position: relative"><button onclick="seach()"> Seach </button></td>
         </tr>
         <tr><td><br></td></tr>
         <tr>
@@ -51,5 +52,6 @@
 <script src="book-update.js"></script>
 <script src="card-name.js"></script>
 <script src="seach.js"></script>
+<script src="login.js"></script>
 </body>
 </html>
