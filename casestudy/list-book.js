@@ -2,7 +2,6 @@ class Book {
     constructor(cate, pic, tile, tacGia,pdf,tomtat) {
         this.pic = pic
         this.tile = tile
-
         this.cate = cate
         this.tacGia=tacGia
         this.pdf=pdf

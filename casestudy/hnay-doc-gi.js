@@ -39,7 +39,7 @@ class HNDG {
 }
 //radom sách gợi ý
 let Hndg = [];
-for(let i=0;i<4;i++){
+for(let i=0;i<5;i++){
     let c=parseInt(Math.floor(Math.random()*Listnamebook.length))
     let count=0
     for(let j=0;j<=Hndg.length;j++){
@@ -63,20 +63,3 @@ function homnaydocgi() {
     document.getElementById('HNDG').innerHTML = show + tile + "</tr></table>";
 }
 homnaydocgi()
-
-function Dacnhantam() {
-    document.getElementById("changeView").innerHTML=Bookdacnhantam;
-}
-function PRtheokieumy() {
-    document.getElementById("changeView").innerHTML=BookPRtheokieumy;
-}
-function Tutotdenvidai() {
-    document.getElementById("changeView").innerHTML=Booktutotdenvidai;
-}
-function Xaydungtruongton() {
-    document.getElementById("changeView").innerHTML=Bookxaydungdetruongton;
-}
-function Nhagiakim() {
-    document.getElementById("changeView").innerHTML=Booknhagiakim;
-}
-
