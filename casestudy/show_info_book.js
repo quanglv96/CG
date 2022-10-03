@@ -4,9 +4,9 @@ function showBook(value) {
     console.log(category)
     let showbook = ""
     //in trang chủ
-    showbook += '<div><table class="Infobook"><tr><td colSpan="5"><a onclick="showDefault()"><h3 style="text-align: left">Trang chủ:</h3></a></td></tr>'
+    showbook += '<div><table style="text-align: left"><tr><td colSpan="5"><a onclick="showDefault()"><h3 style="text-align: left">Trang chủ:</h3></a></td></tr>'
     //in ảnh sách
-    showbook += '<tr><th rowSpan="4"><img src="' + Listnamebook[value].pic + '" style="width:350px ;height: 500px;"/></th>'
+    showbook += '<tr><th rowSpan="4" style="padding-left:300px "><img src="' + Listnamebook[value].pic + '" style="width:350px ;height: 500px;"/></th>'
     //in tên sách
       showbook+=  '<th style="text-align: left">' + Listnamebook[value].tile + '</th></tr>'
     //in tác giả

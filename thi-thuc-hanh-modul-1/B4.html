@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<canvas id="mycanvas" width="500px" height="500px"></canvas>
+<body>
+<script>
+    let ctx=document.getElementById("mycanvas").getContext('2d');
+    let x=+prompt("tọa độ X");
+    let y=+prompt("Tọa độ Y");
+    let Width=+prompt("Chiều dài hình chữ nhật");
+    let Height=+prompt("Chiều rộng hình chữ nhật");
+    ctx.fillStyle='#fbff00';
+    ctx.fillRect(x,y,Width,Height);
+</script>
+</body>
+</html>
