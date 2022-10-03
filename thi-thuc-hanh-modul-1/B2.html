@@ -6,25 +6,28 @@
 </head>
 <body>
 <script>
-    let insertNumberToArray = [];
+    let arr = [];
     let n = +prompt("Nhập số lượng phần tử trong mảng");
-    for (let i = 0; i < n; i++) {
-        let txt = +prompt("Nhập số nguyên phân tử trong mảng");
-        insertNumberToArray.push(txt);
-    }
     let x = +prompt("Nhập số nguyên X");
     let index = +prompt("Nhập số nguyên vị trí index");
-    document.write("Mảng ban đầu: "+ insertNumberToArray.join(", "))
+    for (let i = 0; i < n; i++) {
+        let txt = +prompt("Nhập số nguyên phân tử trong mảng");
+        arr.push(txt);
+    }
+    document.write("Mảng ban đầu: "+ arr.join(", "))
     document.write("Số index là: "+ index+" Số x là: "+x )
-    if (index < insertNumberToArray.length || index >= 0) {
-        for (let i=0; i<insertNumberToArray.length;i++){
-            if(i===index){
-                insertNumberToArray[i] = x;
+    insertNumberToArray(arr,index,n,x)
+    function insertNumberToArray(arr,index,n,x) {
+        if (index < arr.length || index >= 0) {
+            for (let i = 0; i < arr.length; i++) {
+                if (i === index) {
+                    arr[i] = x;
+                }
             }
+            document.write("Mảng sau khi chèn số x và vị trí index: " + arr.join(", "));
+        } else {
+            document.write(arr.join(", "));
         }
-        document.write("Mảng sau khi chèn số x và vị trí index: "+insertNumberToArray.join(", "));
-    } else {
-        document.write(insertNumberToArray.join(", "));
     }
 </script>
 </body>

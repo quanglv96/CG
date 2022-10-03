@@ -9,19 +9,20 @@
 <script>
     let arr=[]
     let n=+prompt("Nhập số lượng điểm thi cần tính trong mảng");
-    for(let i=0;i<n;i++){
-        let txt=+prompt("Nhập điểm thi");
+    for (let i = 0; i < n; i++) {
+        let txt = +prompt("Nhập điểm thi");
         arr.push(txt);
     }
-    console.log(arr.join(", "))
-    let sum=0;
-    for(let i=0; i<arr.length;i++){
-        sum+=arr[i];
+    findAvg(arr,n)
+    function  findAvg(arr,n) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        console.log(sum)
+        let findAvg = sum / arr.length;
+        document.write("Kết quả điểm trung bình của bài 1 là: " + findAvg);
     }
-    console.log(sum)
-    let findAvg=sum/arr.length;
-    document.write("Kết quả điểm trung bình của bài 1 là: "+findAvg);
 </script>
-
 </body>
 </html>

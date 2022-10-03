@@ -7,11 +7,14 @@
 <body>
 <script>
     let n=+prompt("Nhập số nguyên X");
-    let sumOfListPrime=0;
-    for(let i=0;i<=n;i++){
-        sumOfListPrime+=i;
+    let sum=0;
+    function sumOfListPrime(n) {
+        for (let i = 0; i <= n; i++) {
+            sum += i;
+        }
+        document.write("kết quả của bài 3 là: " + sum);
     }
-    document.write("kết quả của bài 3 là: "+sumOfListPrime);
+    sumOfListPrime(n)
 </script>
 </body>
 </html>
