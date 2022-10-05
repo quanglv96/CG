@@ -1,3 +1,5 @@
+package introductiontoJava;
+
 public class variable {
     public static void main(String[] args) {
         int i=10; // số nguyên i =10
