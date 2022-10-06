@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>nhập chữ</title>
+</head>
+<h2>Nhập chữ bất kì</h2>
+<form name="f">
+  <textarea rows="20" cols="50" id="text" onkeydown="show()" name="txt"></textarea>
+</form>
+<body>
+</body>
+<script>
+  let kq=["N","H","À"," ","P","H","Ả","I"," ","C","Ó"," ","N","Ó","C","."," ","O","K"," ","B","A","B","Y","?"]
+  let id=[]
+  function show() {
+    let nhap=document.getElementById('text').value;
+    let a=Array.from(nhap)
+    let i=0
+    if (a.length > 0) {
+      for (; i <= a.length; i++) {
+        id.push(kq[i])
+        document.f.txt.value = id.join('');
+      }
+      id=[]
+    }
+    if (a>kq.length) {
+      document.f.txt.value = " ";
+    }
+  }
+</script>
+</html>

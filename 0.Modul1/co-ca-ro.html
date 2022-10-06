@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    /*td {*/
+    /*    width: 40px;*/
+    /*    height: 40px;*/
+    /*    border: 1px solid black;*/
+    /*}*/
+    button {
+        border-collapse: collapse;
+        width: 40px;
+        height: 40px;
+    }
+</style>
+<h2>Bảng</h2>
+<table id="tab"></table>
+<body>
+</body>
+<script>
+    //tạo bảng button
+    let table = []
+    let demo = []
+    for (let i = 0; i < 10; i++) {
+        demo[i] = "";
+        for (let j = 0; j < 10; j++) {
+            table[[i][j]] = "<td id='" + i + j + "'>" + "<button value=" + i + j + " onclick='tich(this.value)'/>" + "</td>";
+            demo[i] += table[[i][j]]
+        }
+        demo[i] = "<tr>" + demo[i] + "</tr>"
+    }
+    document.getElementById('tab').innerHTML = demo.join("")
+    // tạo mảng vị trí của X và O
+    let VTriX = []
+    let VTriO = []
+    console.log(VTriO.join(" "))
+    function tich(value) {
+        console.log(value)
+        if (VTriX.length === VTriO.length) {
+            document.getElementById(value).innerHTML = "X"
+            VTriX.push(value)
+            console.log(VTriX.join(", "))
+            checkx()
+        } else {
+            document.getElementById(value).innerHTML = "O"
+            VTriO.push(value)
+            // console.log(VTriO.join(", "))
+            checko()
+        }
+    }
+    function checkx() {
+        VTriX.sort();
+        let countx = 1
+        for (let i = 0; i <= VTriO.length; i++) {
+            let a = parseInt(VTriX[i])
+            let b = parseInt(VTriX[i + 1])
+            if (b === (a + 1)) {
+                countx++
+            }
+            if (countx === 5) {
+                alert("X win");
+                break;
+            }
+        }
+        for (let i = 0; i <= VTriO.length; i++) {
+            let a = parseInt(VTriX[i])
+            let b = parseInt(VTriX[i + 1])
+            if (b === (a + 10)) {
+                countx++
+            }
+            if (countx === 5) {
+                alert("X win");
+                break;
+            }
+        }
+        for (let i = 0; i <= VTriO.length; i++) {
+            let a = parseInt(VTriX[i])
+            let b = parseInt(VTriX[i + 1])
+            if (b === (a + 11)) {
+                countx++
+            }
+            if (countx === 5) {
+                alert("X win");
+                break;
+            }
+        }
+        for (let i = 0; i <= VTriO.length; i++) {
+            let a = parseInt(VTriX[i])
+            let b = parseInt(VTriX[i + 1])
+            if (b === (a + 9)) {
+                countx++
+            }
+            if (countx === 5) {
+                alert("X win");
+                break;
+            }
+        }
+    }
+    function checko() {
+        VTriO.sort();
+        let countO = 1
+        for (let i = 0; i < VTriO.length; i++) {
+            let a = parseInt(VTriO[i])
+            let b = parseInt(VTriO[i + 1])
+            if (b === (a + 1)) {
+                countO++
+            }
+            if (countO === 5) {
+                alert("O win");
+                break;
+            }
+        }
+        for (let i = 0; i < VTriO.length; i++) {
+            let a = parseInt(VTriO[i])
+            let b = parseInt(VTriO[i + 1])
+            if (b === (a + 10)) {
+                countO++
+            }
+            if (countO === 5) {
+                alert("O win");
+                break;
+            }
+        }
+        for (let i = 0; i < VTriO.length; i++) {
+            let a = parseInt(VTriO[i])
+            let b = parseInt(VTriO[i + 1])
+            if (b === (a + 11)) {
+                countO++
+            }
+            if (countO === 5) {
+                alert("O win");
+                break;
+            }
+        }
+        for (let i = 0; i < VTriO.length; i++) {
+            let a = parseInt(VTriO[i])
+            let b = parseInt(VTriO[i + 1])
+            if (b === (a + 9)) {
+                countO++
+            }
+            if (countO === 5) {
+                alert("O win");
+                break;
+            }
+        }
+    }
+</script>
+</html>

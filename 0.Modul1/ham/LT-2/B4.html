@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="kq"></p>
+</body>
+<script>
+    let a = prompt("nhạp dãy");
+    check(a)
+    function check(a) {
+        if (a%a===0) {
+            document.getElementById('kq').innerHTML = "True"
+        } else {
+            document.getElementById('kq').innerHTML = "False"
+        }
+    }
+</script>
+</html>

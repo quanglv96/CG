@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = +prompt("Nhập số A")
+    let b = +prompt("Nhập số B")
+    let c = +prompt("Nhập số C")
+    min(a, b, c)
+    function min(a, b, c) {
+        if (a < b && a < c) {
+            alert("Số bé nhất trong 3 số " + a + ", " + b + ", " + c + " là số " + a)
+        } else {
+            if (b < c) {
+                alert("Số bé nhất trong 3 số " + a + ", " + b + ", " + c + " là số " + c)
+            } else {
+                alert("Số bé nhất trong 3 số " + a + ", " + b + ", " + c + " là số " + b)
+            }
+        }
+    }
+</script>
+</html>

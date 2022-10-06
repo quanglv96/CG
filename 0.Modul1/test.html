@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function breakingRecords(bill, k, b) {
+        let sum=0
+        for(let i=0;i<bill.length;i++){
+            if(i===k){
+                continue;
+            }
+            sum+=bill[i]
+        }
+        console.log(b-sum/2)
+    }
+    bill = [21,2,89,94,33,45,86,22,24,60]
+    breakingRecords(bill, 8, 226);
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class GameBoard {
+        constructor(width, hight) {
+            this.width = width;
+            this.hight = hight;
+        }
+
+        set Width(width) {
+            this.width = width;
+        }
+
+        get Width() {
+            return this.width
+        }
+
+        set Hight(hight) {
+            this.hight = hight;
+        }
+
+        get Hight() {
+            return this.hight;
+        }
+    }
+
+    class Ball {
+        constructor(ballX, ballY, goc, speed) {
+            this.ballX = ballX
+            this.ballY = ballY
+            this.goc = goc
+            this.speed = speed
+        }
+
+        set BallX(ballX) {
+            this.ballX = ballX
+        }
+
+        get BallX() {
+            return this.ballX
+        }
+
+        set BallY(ballY) {
+            this.ballY = ballY
+        }
+
+        get BallY() {
+            return this.ballY
+        }
+    }
+</script>
+</html>

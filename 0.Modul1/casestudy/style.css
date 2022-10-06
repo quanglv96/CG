@@ -1,0 +1,74 @@
+html {
+    height: 100%;
+}
+div{
+    padding-top: 2px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    width: 20%;
+    height: 20%;
+    padding-bottom: 15px;
+}
+
+h1,h3 {
+    text-align: left;
+}
+img {
+    width: 100px;
+    height: 150px;
+    padding-left: 5px;
+}
+.topnav {
+    overflow: hidden;
+}
+a {
+    text-decoration: underline;
+    color: blue;
+}
+a:hover,
+a:visited {
+    color: red;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+body {
+    min-height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.254em;
+    margin: 0;
+    padding: 0;
+    background-image: url("pic/backgound-body.jpg");
+    background-size: 100%;
+}
+.TomtatBook {
+    text-align: justify;
+    padding-left: 300px;
+    padding-right: 400px;
+
+}
+.header {
+    background-image: url('pic/copy header.jpg') ;
+    background-size: 100%;
+    text-align: center;
+    padding: 5px;
+    color: white
+}
+
+.footer {
+    position: sticky; /*Cố định footer*/
+    top: 100%;/*cách top 100%*/
+    background-image: url("pic/237-2376520_twitter-header-wallpapers-minimalist-dual-monitor-wallpaper-4k.jpg");
+    background-size: 100%;
+    color: #ffffff;
+    padding-top: 20px;
+    padding-left: 100px;
+    text-align: left;
+    height: 150px;
+}

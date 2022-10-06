@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = +prompt("Nhập 1 số bất kì")
+    check(a)
+    function check(a) {
+        Number.isInteger(a)
+        if (Number.isInteger(a)){
+            if (a > 0) {
+                alert("True")
+            } else {
+                alert("False")
+            }
+        } else {
+            alert("False")
+        }
+    }
+</script>
+</html>

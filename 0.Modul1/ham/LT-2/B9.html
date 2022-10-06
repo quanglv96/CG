@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a=prompt("nhập dãy")
+    let n=prompt("nhập ký tự cần tìm")
+    let arr=Array.from(a)
+    let count=0
+    check(arr,n)
+    function check(arr,n){
+        for (let i=0;i<=arr.length;i++){
+            if (n===arr[i]){
+                count++
+            }
+        }
+        if (count===0){
+            alert("-1")
+        }else {
+            alert(count)
+        }
+    }
+</script>
+</html>
