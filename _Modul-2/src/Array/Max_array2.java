@@ -3,7 +3,7 @@ package Array;
 import java.lang.Math;
 import java.util.Scanner;
 
-public class Max_loop2 {
+public class Max_array2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập số hàng của mảng");
