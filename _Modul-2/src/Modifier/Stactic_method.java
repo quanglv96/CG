@@ -1,4 +1,4 @@
-package OOP_java;
+package Modifier;
 
 public class Stactic_method {
         private int rollno;
