@@ -1,5 +1,4 @@
 package OOP_java;
-
 public class Fan {
     int speed;
     boolean onoff;
