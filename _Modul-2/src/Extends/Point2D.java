@@ -20,13 +20,9 @@ public class Point2D {
     public  float getY(){
         return this.y;
     }
-    public void setXY(float x,float y){
-//        float[] arrayFloat={getX(),getY()};
-        float[] arrayFloat=new float[2];
-    }
     public float[] getXY(){
-        float[] arrayFloat={getX(),getY()};
-        return arrayFloat;
+        float[] arrayFloatXY={getX(),getY()};
+        return arrayFloatXY;
     }
     public String toString(){
         return "2D có tọa độ là ("+getX()+", "+getY()+")";
@@ -46,6 +42,10 @@ public class Point2D {
         }
         public  float getZ(){
             return this.z;
+        }
+        public float[] getXYZ() {
+            float[] arrayFloatXYZ = {getX(), getY()};
+            return arrayFloatXYZ;
         }
         public String toString(){
             return "3D có tọa độ là ("+getX()+", "+getY()+", "+getZ()+")";
