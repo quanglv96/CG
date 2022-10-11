@@ -1,7 +1,7 @@
 package Abstract_interface.Resizeable;
 
 public class Circle extends Shape implements Resizeable{
-    private double radius = 1.0;
+    private static double radius = 1.0;
 
     public Circle() {
     }
@@ -15,7 +15,7 @@ public class Circle extends Shape implements Resizeable{
         this.radius = radius;
     }
 
-    public double getRadius() {
+    public static double getRadius() {
         return radius;
     }
 
@@ -23,7 +23,7 @@ public class Circle extends Shape implements Resizeable{
         this.radius = radius;
     }
 
-    public double getArea() {
+    public static double getArea() {
         return radius * radius * Math.PI;
     }
 
@@ -38,13 +38,11 @@ public class Circle extends Shape implements Resizeable{
                 + ", which is a subclass of "
                 + super.toString();
     }
-    public void resize(){
-//        Scanner input=new Scanner(System.in);
-//        double percent= input.nextDouble();
-        double percent= Math.random()+1;
-        System.out.println(percent);
+    public String resize() {
+        System.out.println("Radius: "+getRadius());
+        double percent = Math.random() + 1;
         setRadius(getRadius()*percent);
         System.out.println("Radius afrer change"+getRadius());
-        System.out.println("New area: "+getArea());
+        return "New  Area Circle: "+getArea();
     }
 }

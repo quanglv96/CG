@@ -1,10 +1,8 @@
 package Abstract_interface.Resizeable;
 
-import java.util.Scanner;
-
 public class Rectangle extends Shape implements Resizeable {
-    private double width = 1.0;
-    private double length = 1.0;
+    private static double width = 1.0;
+    private static double length=1.0;
 
     public Rectangle() {
     }
@@ -20,7 +18,7 @@ public class Rectangle extends Shape implements Resizeable {
         this.length = length;
     }
 
-    public double getWidth() {
+    public static double getWidth() {
         return width;
     }
 
@@ -28,7 +26,7 @@ public class Rectangle extends Shape implements Resizeable {
         this.width = width;
     }
 
-    public double getLength() {
+    public static double getLength() {
         return length;
     }
 
@@ -41,7 +39,7 @@ public class Rectangle extends Shape implements Resizeable {
     }
 
     public double getPerimeter() {
-        return 2 * (width + this.length);
+        return 2 * (width + length);
     }
 
     @Override
@@ -53,15 +51,14 @@ public class Rectangle extends Shape implements Resizeable {
                 + ", which is a subclass of "
                 + super.toString();
     }
-    public void resize(){
-//        Scanner input=new Scanner(System.in);
-//        double percent= input.nextDouble();
-        double percent= Math.random()+1;
-        System.out.println(percent);
-        setWidth( getWidth()*percent);
+    public String resize() {
+        System.out.println("Width: "+getWidth());
+        System.out.println("Height: "+getWidth());
+        double percent = Math.random() + 1;
+        setWidth(getWidth()*percent);
         System.out.println("Width afrer change"+getWidth());
         setLength(getLength()*percent);
         System.out.println("Height afrer change"+getWidth());
-        System.out.println("New area: "+getArea());
+        return "New  Area Rectangle: "+getArea();
     }
 }
