@@ -1,11 +1,10 @@
 package BinaryFile.product_manager;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class test {
-    static List<Product> listProduct = new ArrayList<>();
+    static ArrayList<Product> listProduct = new ArrayList<>();
     static ProductManager productManager = new ProductManager();
 
     public static void main(String[] args) {
@@ -34,36 +33,36 @@ public class test {
                     String company = input.nextLine();
                     System.out.println("Giá sản phẩm: ");
                     double price = input.nextDouble();
+                    input.nextLine();
                     System.out.println("Thông tin khác: ");
                     String info = input.nextLine();
                     listProduct.add(new Product(id, name, company, price, info));
-//                    Product product = new Product(id, name, company, price, info);
-                    productManager.writeToFile("D:\\CG\\_Modul-2\\src\\BinaryFile\\product_manager\\ProductManager.txt"
-                            , listProduct);
+                    productManager.writeToFile("D:\\CG\\_Modul-2\\src\\BinaryFile\\product_manager\\ProductManager.txt", listProduct);
+                    System.out.println("Thêm thành công");
                     break;
                 case 2:
                     input.nextLine();
                     System.out.println("Xóa sản phẩm:");
                     System.out.println(" Mã sản phẩm muốn xóa:");
                     productManager.removeID(input.nextLine(), listProduct);
-                    System.out.println("Xóa thành công");
                     break;
                 case 3:
                     input.nextLine();
                     System.out.println("Sửa thông tin sản phẩm");
                     System.out.println("Mã sản phẩm muốn sửa:");
-                    productManager.editProductID(input.nextLine(), listProduct);
+                    String indexEdit=input.nextLine();
+                    productManager.editProductID(indexEdit, listProduct);
                     break;
                 case 4:
-//                    input.nextLine();
-//                    System.out.println("Hiển thị tất cả sản phẩm");
-//                    ArrayList<Product> data = productManager.readDataFromFile("D:\\CG\\_Modul-2\\src\\BinaryFile\\product_manager\\ProductManager.txt");
-//                    for(Product product:data){
-//                        System.out.println(product);
-//                    }
-                    productManager.demo("D:\\CG\\_Modul-2\\src\\BinaryFile\\product_manager\\ProductManager.txt");
+                    input.nextLine();
+                    System.out.println("Hiển thị tất cả sản phẩm");
+                    ArrayList<Product> data = productManager.readDataFromFile("D:\\CG\\_Modul-2\\src\\BinaryFile\\product_manager\\ProductManager.txt",listProduct);
+                    for(Product product:data){
+                        System.out.println(product);
+                    }
                     break;
                 case 5:
+
                     break;
 
             }

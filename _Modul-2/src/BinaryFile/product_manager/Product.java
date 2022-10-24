@@ -1,12 +1,15 @@
 package BinaryFile.product_manager;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private String id;
     private  String name;
     private  String company;
     private double price;
     private String info;
-    public Product(){}
+    public Product(){
+    }
 
     public Product(String id, String name, String company, double price, String info) {
         this.id = id;
