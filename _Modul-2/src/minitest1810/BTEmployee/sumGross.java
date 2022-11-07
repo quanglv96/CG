@@ -1,2 +1,5 @@
-package DSACH.arrayList;public interface sumGross {
+package minitest1810.BTEmployee;
+
+public interface sumGross {
+    double gross();
 }
