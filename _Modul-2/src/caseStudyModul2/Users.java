@@ -9,13 +9,13 @@ public class Users {
             System.out.println("╔═══════════════════════════════════════════════════╗");
             System.out.println("║--------------->Tiệm sách Lưu Quang<---------------║");
             System.out.println("╠═══════════════════════════════════════════════════╣");
-            System.out.println("╟─ 1. Đọc sách ─────────────────────────────────────╢");
-            System.out.println("╟─ 2. Sách đã đọc ──────────────────────────────────╢");
-            System.out.println("╟─ 3. Lọc theo thẻ loại sách ───────────────────────╢");
-            System.out.println("╟─ 4. Tìm kiếm ─────────────────────────────────────╢");
-            System.out.println("╟─ 5. Thông tin tài khoản ──────────────────────────╢");
-            System.out.println("╟─ 6. Đổi mật khẩu ─────────────────────────────────╢");
-            System.out.println("╟─ 0. Đăng xuất ────────────────────────────────────╢");
+            System.out.println("╟─ [1]. Đọc sách ───────────────────────────────────╢");
+            System.out.println("╟─ [2]. Sách đã đọc ────────────────────────────────╢");
+            System.out.println("╟─ [3]. Lọc theo thẻ loại sách ─────────────────────╢");
+            System.out.println("╟─ [4]. Tìm kiếm ───────────────────────────────────╢");
+            System.out.println("╟─ [5]. Thông tin tài khoản ────────────────────────╢");
+            System.out.println("╟─ [6]. Đổi mật khẩu ───────────────────────────────╢");
+            System.out.println("╟─ [0]. Đăng xuất ──────────────────────────────────╢");
             System.out.println("╚═══════════════════════════════════════════════════╝");
             choice= checkInput.checkChoice(0,6);
             switch (choice){

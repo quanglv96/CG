@@ -30,11 +30,11 @@ public class RunModul2 {
             System.out.println("╠═══════════════════════════════════════════════════╣");
             System.out.println("╠->Bạn muốn truy cập vào tiệm sách với tư cách là:<-╣");
             System.out.println("╠═══════════════════════════════════════════════════╣");
-            System.out.println("╟─ 1. Khách ────────────────────────────────────────╢");
-            System.out.println("╟─ 2. Đăng nhập thành viên ─────────────────────────╢");
-            System.out.println("╟─ 3. Đăng kí thành viên ───────────────────────────╢");
-            System.out.println("╟─ 4. Quản lý ──────────────────────────────────────╢");
-            System.out.println("╟─ 0. Thoát ────────────────────────────────────────╢");
+            System.out.println("╟─ [1]. Khách ──────────────────────────────────────╢");
+            System.out.println("╟─ [2]. Đăng nhập thành viên ───────────────────────╢");
+            System.out.println("╟─ [3]. Đăng kí thành viên ─────────────────────────╢");
+            System.out.println("╟─ [4]. Quản lý ────────────────────────────────────╢");
+            System.out.println("╟─ [0]. Thoát ──────────────────────────────────────╢");
             System.out.println("╚═══════════════════════════════════════════════════╝");
             choice= checkInput.checkChoice(0,4);
             int count = -1;
@@ -67,8 +67,8 @@ public class RunModul2 {
                                 System.out.println("╔═══════════════════════════════════════════╗");
                                 System.out.println("║⛔Mật khẩu sai. Quay lại với tư cách Khách?║");
                                 System.out.println("╠═══════════════════════════════════════════╣");
-                                System.out.println("╟─ 1. Đồng ý ───────────────────────────────╢");
-                                System.out.println("╟─ 2. Nhập lại ─────────────────────────────╢");
+                                System.out.println("╟─ [1]. Đồng ý ─────────────────────────────╢");
+                                System.out.println("╟─ [2]. Nhập lại ───────────────────────────╢");
                                 System.out.println("╚═══════════════════════════════════════════╝");
                                 input.nextLine();
                                 number4= checkInput.checkChoice(1,2);
@@ -84,8 +84,8 @@ public class RunModul2 {
                             System.out.println("╔═══════════════════════════════════════════╗");
                             System.out.println("║⛔Mật khẩu sai. Quay lại với tư cách Khách?║");
                             System.out.println("╠═══════════════════════════════════════════╣");
-                            System.out.println("╟─ 1. Đồng ý ───────────────────────────────╢");
-                            System.out.println("╟─ 2. Nhập lại ─────────────────────────────╢");
+                            System.out.println("╟─ [1]. Đồng ý ─────────────────────────────╢");
+                            System.out.println("╟─ [2]. Nhập lại ───────────────────────────╢");
                             System.out.println("╚═══════════════════════════════════════════╝");
                             input.nextLine();
                             number4= checkInput.checkChoice(1,2);

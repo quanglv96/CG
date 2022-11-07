@@ -68,8 +68,8 @@ public class LoginUser {
         }
         System.out.println("▷ Mật khẩu");
         String password = input.nextLine();
-        System.out.println("1. Tạo tài khoản");
-        System.out.println("2. Bỏ qua");
+        System.out.println("[1]. Tạo tài khoản");
+        System.out.println("[2]. Bỏ qua");
         int choice = checkInput.checkChoice(1, 2);
         switch (choice) {
             case 1:
@@ -114,8 +114,8 @@ public class LoginUser {
                     break;
                 } else {
                     System.out.println("⛔ Mật khẩu sai. Quay lại với tư cách khách?");
-                    System.out.println("1. Đồng ý");
-                    System.out.println("2. Nhập lại");
+                    System.out.println("[1]. Đồng ý");
+                    System.out.println("[2]. Nhập lại");
                     number2 = checkInput.checkChoice(1, 2);
                     switch (number2) {
                         case 1:
@@ -131,8 +131,8 @@ public class LoginUser {
                 break;
             } else {
                 System.out.println("⛔ Tên đăng nhập sai. Quay lại với tư cách khách?");
-                System.out.println("1. Đồng ý");
-                System.out.println("2. Nhập lại");
+                System.out.println("[1]. Đồng ý");
+                System.out.println("[2]. Nhập lại");
                 number2 = checkInput.checkChoice(1, 2);
                 switch (number2) {
                     case 1:

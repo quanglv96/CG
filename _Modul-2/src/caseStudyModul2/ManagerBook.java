@@ -31,8 +31,8 @@ public class ManagerBook {
             if (Objects.equals(idDel, listBookManager.get(i).getId())) {
                 countDel++;
                 System.out.println("===>Bạn chắc chắn muốn xóa id:" + listBookManager.get(i).getId());
-                System.out.println("1. Đồng ý");
-                System.out.println("2. Bỏ qua");
+                System.out.println("[1]. Đồng ý");
+                System.out.println("[2]. Bỏ qua");
                 int choice = checkInput.checkChoice(1,2);
                 switch (choice) {
                     case 1:
@@ -120,8 +120,8 @@ public class ManagerBook {
             if(Objects.equals(userLook, listUser.get(i).getUserName())){
                 count++;
                 System.out.println("Bạn chắc chắn muốn mở khóa cho "+userLook+"?");
-                System.out.println("1. Đồng ý");
-                System.out.println("2. Không");
+                System.out.println("[1]. Đồng ý");
+                System.out.println("[2]. Không");
                 int choice = checkInput.checkChoice(1,2);
                 switch (choice){
                     case 1:
